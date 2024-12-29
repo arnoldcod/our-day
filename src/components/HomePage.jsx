@@ -27,7 +27,7 @@ const Navbar = () => {
             <a href="#" className="text-white/50 font-serif text-xl">A&H</a>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
+              <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
               <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a>
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
               <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
@@ -145,54 +145,77 @@ const HomePage = () => {
       </motion.section>
 
       {/* Our Story Section */}
-      <motion.section 
-        id="story"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="py-20 px-8"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif mb-8 text-primary">Our Story</h2>
-          <p className="text-secondary leading-relaxed">
-            We met on a crisp autumn evening at a local coffee shop. What started as a chance encounter
-            turned into hours of conversation, laughter, and the beginning of our beautiful journey together.
-            Two years later, here we are, ready to begin our forever.
-          </p>
+      <section className="py-32 px-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-center">
+          <div className="w-1/4 h-px bg-gray-300"></div>
+          <div className="px-8 text-center">
+            <h2 className="text-3xl font-serif mb-8">See how it all started</h2>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/our-story'}
+              className="bg-black text-white px-8 py-3 text-lg hover:bg-black/90 transition-colors"
+            >
+              Our Story
+            </motion.button>
+          </div>
+          <div className="w-1/4 h-px bg-gray-300"></div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* Event Details */}
-      <section id="details" className="bg-primary/5 py-20 px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 text-center text-primary">The Celebration</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center p-8 bg-white rounded-lg shadow-lg"
-            >
-              <h3 className="text-2xl mb-4 text-primary">Ceremony</h3>
-              <p className="text-secondary">4:00 PM</p>
-              <p className="text-secondary">St. Mary&apos;s Cathedral</p>
-              <p className="text-secondary">123 Wedding Lane</p>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center p-8 bg-white rounded-lg shadow-lg"
-            >
-              <h3 className="text-2xl mb-4 text-primary">Reception</h3>
-              <p className="text-secondary">6:00 PM</p>
-              <p className="text-secondary">The Grand Hotel</p>
-              <p className="text-secondary">456 Celebration Ave</p>
-            </motion.div>
+      {/* // Update the Event Details section in the HomePage component: */}
+
+
+      {/* Event Details - Ceremony */}
+      <section id="details" className="min-h-screen grid md:grid-cols-2">
+        <div className="relative h-full min-h-[400px]">
+          <img 
+            src="./2wed.jpg" 
+            alt="Ceremony venue" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex items-center justify-center p-12 bg-white">
+          <div className="max-w-md">
+            <h2 className="text-5xl font-serif mb-8 text-primary">Ceremony</h2>
+            <div className="space-y-2 text-secondary">
+              <p className="text-2xl mb-6">4:00 PM</p>
+              <p>Grace Church</p>
+              <p>123 Demo St.</p>
+              <p className="mb-6">Flagstaff, AZ 12345</p>
+              <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
+                Map
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Event Details - Reception */}
+      <section className="min-h-screen grid md:grid-cols-2">
+        <div className="relative h-full min-h-[400px] md:order-2">
+          <img 
+            src="./2wed.jpg" 
+            alt="Reception venue" 
+            className="absolute inset-0 w-full h-full object-cover filter grayscale"
+          />
+        </div>
+        <div className="flex items-center justify-center p-12 bg-white md:order-1">
+          <div className="max-w-md">
+            <h2 className="text-5xl font-serif mb-8 text-primary">Reception</h2>
+            <div className="space-y-2 text-secondary">
+              <p className="text-2xl mb-6">4:30 PM - 10:00 PM</p>
+              <p>The Barrel Keg</p>
+              <p>123 Demo St.</p>
+              <p className="mb-6">Flagstaff, AZ 12345</p>
+              <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
+                Map
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Gallery Section */}
       <section id="gallery" className="py-20 px-8">
@@ -207,7 +230,7 @@ const HomePage = () => {
               className="relative aspect-square overflow-hidden rounded-lg"
             >
               <img
-                src={`/api/placeholder/400/${400 + index}`}
+                src={`./1wed.jpg`}
                 alt={`Gallery image ${index}`}
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
