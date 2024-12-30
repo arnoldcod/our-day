@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import GallerySection from './GallerySection';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -168,12 +170,14 @@ const HomePage = () => {
 
       {/* Event Details - Ceremony */}
       <section id="details" className="min-h-screen grid md:grid-cols-2">
-        <div className="relative h-full min-h-[400px]">
-          <img 
-            src="./2wed.jpg" 
-            alt="Ceremony venue" 
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+        <div className="relative h-full min-h-[400px] px-8 py-12">
+          <div className="relative h-full w-full overflow-hidden">
+            <img 
+              src="./2wed.jpg" 
+              alt="Ceremony venue" 
+              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            />
+          </div>
         </div>
         <div className="flex items-center justify-center p-12 bg-white">
           <div className="max-w-md">
@@ -193,12 +197,14 @@ const HomePage = () => {
 
       {/* Event Details - Reception */}
       <section className="min-h-screen grid md:grid-cols-2">
-        <div className="relative h-full min-h-[400px] md:order-2">
-          <img 
-            src="./2wed.jpg" 
-            alt="Reception venue" 
-            className="absolute inset-0 w-full h-full object-cover filter grayscale"
-          />
+        <div className="relative h-full min-h-[400px] px-8 py-12 md:order-2">
+          <div className="relative h-full w-full overflow-hidden">
+            <img 
+              src="./2wed.jpg" 
+              alt="Reception venue" 
+              className="absolute inset-0 w-full h-full object-cover rounded-lg filter grayscale"
+            />
+          </div>
         </div>
         <div className="flex items-center justify-center p-12 bg-white md:order-1">
           <div className="max-w-md">
@@ -216,28 +222,57 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* RSVP Button */}
+       {/* New RSVP Section */}
+       <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen relative flex items-center justify-center"
+      >
+        <div className="absolute inset-0 px-8 py-12">
+          <div className="relative h-full w-full overflow-hidden">
+            <img 
+              src="./gallery/wed13.jpg"
+              alt="Couple embracing"
+              className="w-full h-full object-cover rounded-lg"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+        </div>
+        
+        <div className="relative z-10 text-center space-y-8">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-2xl font-light text-white"
+          >
+            Join Us
+          </motion.h2>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-6xl font-serif text-white"
+          >
+            We hope you can make it!
+          </motion.h1>
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ delay: 0.6 }}
+            className="bg-white text-primary px-12 py-3 text-lg font-medium hover:bg-gray-100 transition-colors"
+          >
+            RSVP
+          </motion.button>
+        </div>
+      </motion.section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-20 px-8">
-        <h2 className="text-4xl font-serif mb-12 text-center text-primary">Our Gallery</h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="relative aspect-square overflow-hidden rounded-lg"
-            >
-              <img
-                src={`./1wed.jpg`}
-                alt={`Gallery image ${index}`}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <GallerySection />
 
       {/* Registry Section */}
       <section id="registry" className="bg-primary/5 py-20 px-8">
@@ -303,16 +338,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* RSVP Button */}
-      <section className="py-20 text-center">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-primary text-white px-12 py-4 rounded-full text-lg hover:bg-primary/90 transition-colors"
-        >
-          RSVP Now
-        </motion.button>
-      </section>
+
     </div>
   );
 };
