@@ -10,7 +10,7 @@ const OurStoryPage = () => {
       {/* Hero Section */}
       <section className="h-[70vh] relative">
         <img 
-          src="./2wed.jpg" 
+          src="./3wed.jpg" 
           alt="Couple together" 
           className="w-full h-full object-cover"
         />

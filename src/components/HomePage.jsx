@@ -32,11 +32,11 @@ const Navbar = () => {
               <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
               <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a>
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
-              <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
+              {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
               <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a>
-              <button className="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/90 transition-colors">
+              <a href="https://3jkpmtu6jm5.typeform.com/to/nQZg54LH" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
-              </button>
+              </a> 
             </div>
 
             <button 
@@ -70,11 +70,11 @@ const Navbar = () => {
               <a href="#story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Our Story</a>
               <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Details</a>
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
-              <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a>
+              {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
               <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Travel</a>
-              <button className="bg-primary text-white px-6 py-2 rounded-full text-lg">
+              <a href="https://3jkpmtu6jm5.typeform.com/to/nQZg54LH" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
@@ -93,7 +93,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const weddingDate = new Date('2026-02-26').getTime();
+      const weddingDate = new Date('2026-02-14').getTime();
       const now = new Date().getTime();
       const difference = weddingDate - now;
 
@@ -131,8 +131,9 @@ const HomePage = () => {
         </div>
 
         <div className="relative z-10 text-center p-8">
-          <h1 className="text-6xl font-serif mb-4 text-white">Arnold & Haven</h1>
-          <p className="text-2xl text-white/90 mb-8">26th February 2026</p>
+          <h1 className="text-2xl font-serif mb-14 text-white">Arnold Uwamwezi  &  Haven Gezai</h1>
+          <p className="text-4xl  text-white/90 mb-10 font-serif text-shadow-glow">Save The Date</p>
+          <p className="text-2xl font-normal text-white/90 mb-10">14th February 2026</p>
           
           {/* Countdown Timer */}
           <div className="flex gap-8 justify-center">
@@ -184,12 +185,12 @@ const HomePage = () => {
             <h2 className="text-5xl font-serif mb-8 text-primary">Ceremony</h2>
             <div className="space-y-2 text-secondary">
               <p className="text-2xl mb-6">4:00 PM</p>
-              <p>Grace Church</p>
-              <p>123 Demo St.</p>
-              <p className="mb-6">Flagstaff, AZ 12345</p>
-              <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
+              <a href="https://phaneroo.org/ministry-profile/"><p className=" mb-6 font-normal" >Phaneroo Ministry</p></a>
+              <a href="https://www.spekeresort.com/dining/"><p className="font-bold  text-primary" >Speke, Resort Munyonyo</p></a>
+              <p className="mb-6">Kampala, Uganda</p>
+              {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -200,7 +201,7 @@ const HomePage = () => {
         <div className="relative h-full min-h-[400px] px-8 py-12 md:order-2">
           <div className="relative h-full w-full overflow-hidden">
             <img 
-              src="./2wed.jpg" 
+              src="./22wed.jpg" 
               alt="Reception venue" 
               className="absolute inset-0 w-full h-full object-cover rounded-lg filter grayscale"
             />
@@ -210,13 +211,12 @@ const HomePage = () => {
           <div className="max-w-md">
             <h2 className="text-5xl font-serif mb-8 text-primary">Reception</h2>
             <div className="space-y-2 text-secondary">
-              <p className="text-2xl mb-6">4:30 PM - 10:00 PM</p>
-              <p>The Barrel Keg</p>
-              <p>123 Demo St.</p>
-              <p className="mb-6">Flagstaff, AZ 12345</p>
-              <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
+              <p className="text-2xl mb-6">4:30 PM - 11:00 PM</p>
+              <a href="https://www.spekeresort.com/dining/"><p className="  font-bold  text-primary" >Speke, Resort Munyonyo</p></a>
+              <p className="mb-6">Kampala, Uganda</p>
+              {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -233,7 +233,7 @@ const HomePage = () => {
         <div className="absolute inset-0 px-8 py-12">
           <div className="relative h-full w-full overflow-hidden">
             <img 
-              src="./gallery/wed13.jpg"
+              src="./gallery/wed15.jpg"
               alt="Couple embracing"
               className="w-full h-full object-cover rounded-lg"
             />
@@ -258,7 +258,7 @@ const HomePage = () => {
           >
             We hope you can make it!
           </motion.h1>
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
@@ -267,7 +267,7 @@ const HomePage = () => {
             className="bg-white text-primary px-12 py-3 text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             RSVP
-          </motion.button>
+          </motion.button> */}
         </div>
       </motion.section>
 
@@ -275,7 +275,7 @@ const HomePage = () => {
       <GallerySection />
 
       {/* Registry Section */}
-      <section id="registry" className="bg-primary/5 py-20 px-8">
+      {/* <section id="registry" className="bg-primary/5 py-20 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-serif mb-8 text-primary">Gift Registry</h2>
           <p className="text-secondary mb-12">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we&apos;ve registered at the following stores:</p>
@@ -295,7 +295,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Travel Section */}
       <section id="travel" className="py-20 px-8">
