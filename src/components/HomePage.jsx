@@ -29,12 +29,12 @@ const Navbar = () => {
             <a href="#" className="text-white/50 font-serif text-xl">A&H</a>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
+              {/* <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a> */}
               <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a>
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
               {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
               <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-1 rounded-full text-lg">
                 RSVP
               </a> 
             </div>
@@ -157,7 +157,7 @@ const HomePage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/our-story'}
-              className="bg-black text-white px-8 py-3 text-lg hover:bg-black/90 transition-colors"
+              className="bg-primary text-white px-8 py-3 text-lg hover:bg-black/90 transition-colors"
             >
               Our Story
             </motion.button>
@@ -184,9 +184,9 @@ const HomePage = () => {
           <div className="max-w-md">
             <h2 className="text-5xl font-serif mb-8 text-primary">Ceremony</h2>
             <div className="space-y-2 text-secondary">
-              <p className="text-2xl mb-6">4:00 PM</p>
-              <a href="https://phaneroo.org/ministry-profile/"><p className=" mb-6 font-normal" >Phaneroo Ministry</p></a>
-              <a href="https://www.spekeresort.com/dining/"><p className="font-bold  text-primary" >Speke, Resort Munyonyo</p></a>
+              <p className="text-2xl mb-6">10:00 AM</p>
+              Follow the link: <a href="https://phaneroo.org/ministry-profile/"><p className="font-bold  text-primary" > Phaneroo Ministry</p></a>
+            
               <p className="mb-6">Kampala, Uganda</p>
               {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
@@ -203,7 +203,7 @@ const HomePage = () => {
             <img 
               src="./22wed.jpg" 
               alt="Reception venue" 
-              className="absolute inset-0 w-full h-full object-cover rounded-lg filter grayscale"
+              className="absolute inset-0 w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>

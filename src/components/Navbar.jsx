@@ -28,7 +28,7 @@ const Navbar = () => {
             <a href="/" className="text-white/50 font-serif text-xl">A&H</a>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="/our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
+              {/* <a href="/our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a> */}
               <a href="/#details" className="text-white/50 hover:text-secondary transition-colors">Details</a>
               <a href="/#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
               {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
