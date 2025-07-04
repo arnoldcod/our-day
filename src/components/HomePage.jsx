@@ -34,7 +34,7 @@ const Navbar = () => {
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
               {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
               <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a>
-              <a href="https://3jkpmtu6jm5.typeform.com/to/nQZg54LH" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
               </a> 
             </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
               {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
               <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Travel</a>
-              <a href="https://3jkpmtu6jm5.typeform.com/to/nQZg54LH" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
               </a>
             </div>
@@ -123,7 +123,7 @@ const HomePage = () => {
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="./wedwed.jpg" 
+            src="./weddddd.jpg" 
             alt="Wedding ceremony venue" 
             className="w-full h-full object-cover"
           />
@@ -132,7 +132,7 @@ const HomePage = () => {
 
         <div className="relative z-10 text-center p-8">
           <h1 className="text-2xl font-serif mb-14 text-white">Arnold Uwamwezi  &  Haven Gezai</h1>
-          <p className="text-4xl  text-white/90 mb-10 font-serif text-shadow-glow">Save The Date</p>
+          <p className="text-4xl  text-white/90 mb-10 font-serif ">Save The Date</p>
           <p className="text-2xl font-normal text-white/90 mb-10">14th February 2026</p>
           
           {/* Countdown Timer */}
@@ -222,54 +222,57 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* RSVP Button */}
-       {/* New RSVP Section */}
-       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen relative flex items-center justify-center"
-      >
-        <div className="absolute inset-0 px-8 py-12">
-          <div className="relative h-full w-full overflow-hidden">
-            <img 
-              src="./gallery/wed15.jpg"
-              alt="Couple embracing"
-              className="w-full h-full object-cover rounded-lg"
-            />
-            <div className="absolute inset-0 bg-black/20" />
-          </div>
-        </div>
-        
-        <div className="relative z-10 text-center space-y-8">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-2xl font-light text-white"
-          >
-            Join Us
-          </motion.h2>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-6xl font-serif text-white"
-          >
-            We hope you can make it!
-          </motion.h1>
-          {/* <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ delay: 0.6 }}
-            className="bg-white text-primary px-12 py-3 text-lg font-medium hover:bg-gray-100 transition-colors"
-          >
-            RSVP
-          </motion.button> */}
-        </div>
-      </motion.section>
+      {/* RSVP Section */}
+<motion.section
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  className="min-h-screen relative flex items-center justify-center"
+>
+  <div className="absolute inset-0 px-8 py-12">
+    <div className="relative h-full w-full overflow-hidden">
+      <img 
+        src="./gallery/wed15.jpg"
+        alt="Couple embracing"
+        className="w-full h-full object-cover rounded-lg"
+      />
+      <div className="absolute inset-0 bg-black/20" />
+    </div>
+  </div>
+  
+  <div className="relative z-10 text-center space-y-8">
+    <motion.h2 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="text-2xl font-light text-white"
+    >
+      Join Us
+    </motion.h2>
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4 }}
+      className="text-6xl font-serif text-white"
+    >
+      We hope you can make it!
+    </motion.h1>
+    <motion.a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ delay: 0.6 }}
+      className="inline-block bg-white text-primary px-12 py-3 text-lg font-medium hover:bg-gray-100 transition-colors rounded-full"
+    >
+      RSVP
+    </motion.a>
+  </div>
+</motion.section>
+
 
       {/* Gallery Section */}
       <GallerySection />

@@ -33,7 +33,7 @@ const Navbar = () => {
               <a href="/#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
               {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
               <a href="/#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a>
-              <a href="https://3jkpmtu6jm5.typeform.com/to/nQZg54LH" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
               </a>
             </div>
