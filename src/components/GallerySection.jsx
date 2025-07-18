@@ -6,32 +6,47 @@ const GallerySection = () => {
     {
       id: 1,
       src: './gallery/wed11.jpg',
-      alt: 'Couple at sunset',
+      // alt: 'Couple at sunset',
     },
     {
       id: 2,
       src: './gallery/wed12.jpg',
-      alt: 'Engagement photo',
+      // alt: 'Engagement photo',
     },
     {
       id: 3,
       src: './gallery/wed13.jpg',
-      alt: 'First date location',
+      // alt: 'First date location',
     },
     {
       id: 4,
       src: './gallery/wed14.jpg',
-      alt: 'Traveling together',
+      // alt: 'Traveling together',
     },
     {
       id: 5,
       src: './gallery/wed16.jpg',
-      alt: 'Proposal moment',
+      // alt: 'Proposal moment',
     },
     {
       id: 6,
       src: './gallery/wed18.jpg',
-      alt: 'Casual couple photo',
+      // alt: 'Casual couple photo',
+    },
+    {
+      id: 7,
+      src: './gallery/wed19.jpg',
+      // alt: 'Casual couple photo',
+    },
+    {
+      id: 8,
+      src: './gallery/wed20.jpg',
+      // alt: 'Casual couple photo',
+    },
+    {
+      id: 9,
+      src: './gallery/wed21.jpg',
+      // alt: 'Casual couple photo',
     }
   ];
 
