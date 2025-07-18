@@ -67,7 +67,7 @@ const Navbar = () => {
             className="fixed inset-0 z-40 bg-white pt-16 md:hidden"
           >
             <div className="flex flex-col items-center space-y-6 p-8">
-              <a href="#story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Our Story</a>
+              {/* <a href="#story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Our Story</a> */}
               <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Details</a>
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
               {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
@@ -185,7 +185,7 @@ const HomePage = () => {
             <h2 className="text-5xl font-serif mb-8 text-primary">Ceremony</h2>
             <div className="space-y-2 text-secondary">
               <p className="text-2xl mb-6">10:00 AM</p>
-              Follow the link: <a href="https://phaneroo.org/ministry-profile/"><p className="font-bold  text-primary" > Phaneroo Ministry</p></a>
+              Click on the link below: <a href="https://phaneroo.org/ministry-profile/"><p className="font-bold  text-primary" > Phaneroo Ministry</p></a>
             
               <p className="mb-6">Kampala, Uganda</p>
               {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
@@ -212,7 +212,7 @@ const HomePage = () => {
             <h2 className="text-5xl font-serif mb-8 text-primary">Reception</h2>
             <div className="space-y-2 text-secondary">
               <p className="text-2xl mb-6">4:30 PM - 11:00 PM</p>
-              <a href="https://www.spekeresort.com/dining/"><p className="  font-bold  text-primary" >Speke, Resort Munyonyo</p></a>
+              Click on the link below:<a href="https://hotel360.co.ug/"><p className="  font-bold  text-primary" >Hotel 360, Entebbe Road</p></a>
               <p className="mb-6">Kampala, Uganda</p>
               {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
@@ -314,8 +314,8 @@ const HomePage = () => {
               <div className="space-y-4 text-secondary">
                 <p>Nearest Airports:</p>
                 <ul className="list-disc pl-5">
-                  <li>International Airport (20 miles)</li>
-                  <li>Regional Airport (10 miles)</li>
+                  <li>Entebbe International Airport(20 miles)</li>
+                  {/* <li>Regional Airport (10 miles)</li> */}
                 </ul>
               </div>
             </motion.div>
@@ -328,7 +328,7 @@ const HomePage = () => {
               <h3 className="text-2xl text-primary">Where to Stay</h3>
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg shadow-lg">
-                  <h4 className="text-primary">The Grand Hotel</h4>
+                  <h4 className="text-primary"> Entebbe International Airport</h4>
                   <p className="text-secondary">Special rate: $199/night</p>
                 </div>
                 <div className="p-4 bg-white rounded-lg shadow-lg">

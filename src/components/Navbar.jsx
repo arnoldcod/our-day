@@ -67,10 +67,10 @@ const Navbar = () => {
           >
             <div className="flex flex-col items-center space-y-6 p-8">
               <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Our Story</a>
-              <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Details</a>
-              <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
+              {/* <a href="/details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Details</a> */}
+              <a href="/#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
               {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
-              <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Travel</a>
+              {/* <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Travel</a> */}
               {/* <button className="bg-primary text-white px-6 py-2 rounded-full text-lg">
                 RSVP
               </button> */}
