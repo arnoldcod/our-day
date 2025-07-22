@@ -329,11 +329,11 @@ const HomePage = () => {
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg shadow-lg">
                   <h4 className="text-primary"> Entebbe International Airport</h4>
-                  <p className="text-secondary">Special rate: $199/night</p>
+                  {/* <p className="text-secondary">Special rate: $199/night</p> */}
                 </div>
                 <div className="p-4 bg-white rounded-lg shadow-lg">
                   <h4 className="text-primary">Boutique Inn</h4>
-                  <p className="text-secondary">Special rate: $159/night</p>
+                  {/* <p className="text-secondary">Special rate: $159/night</p> */}
                 </div>
               </div>
             </motion.div>
