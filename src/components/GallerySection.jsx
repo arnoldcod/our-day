@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
+const changeLanguage = (lng) => {
+  i18n.changeLanguage(lng);
+};
 
 const GallerySection = () => {
+  const { t, i18n } = useTranslation();
+  
   // Array of gallery images with their details
   const galleryImages = [
     {
@@ -52,7 +59,7 @@ const GallerySection = () => {
 
   return (
     <section id="gallery" className="py-20 px-8">
-      <h2 className="text-4xl font-serif mb-12 text-center text-primary">Our Gallery</h2>
+      <h2 className="text-4xl font-serif mb-12 text-center text-primary">{t("Gallery")}</h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {galleryImages.map((image, index) => (
           <motion.div

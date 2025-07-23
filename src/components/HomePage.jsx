@@ -2,15 +2,22 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GallerySection from './GallerySection';
 
+import { useTranslation } from 'react-i18next';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -29,13 +36,19 @@ const Navbar = () => {
             <a href="#" className="text-white/50 font-serif text-xl">A&H</a>
             
             <div className="hidden md:flex items-center space-x-8">
-              {/* <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a> */}
-              <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a>
-              <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">Gallery</a>
+          <div className=" text-white/50 md:flex  top-4 items-center space-x-4">
+  <button onClick={() => i18n.changeLanguage('en')} className="text-sm px-2">EN</button>
+  <span className="text-white/50 px-1">|</span>
+  <button onClick={() => i18n.changeLanguage('fr')} className="text-sm px-2">FR</button>
+</div>
+
+              <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors"> {t("ourStoryButton")}</a>
+              {/* <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a> */}
+              <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">{t("Gallery")}</a>
               {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
-              <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a>
+              <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-1 rounded-full text-lg">
-                RSVP
+                {t("rsvp")}
               </a> 
             </div>
 
@@ -67,14 +80,28 @@ const Navbar = () => {
             className="fixed inset-0 z-40 bg-white pt-16 md:hidden"
           >
             <div className="flex flex-col items-center space-y-6 p-8">
-              {/* <a href="#story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Our Story</a> */}
-              <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Details</a>
-              <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Gallery</a>
+              <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
+              <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
+  {t("Details")}
+</a>
+              <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Gallery")}</a>
               {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
-              <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Travel</a>
+              <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
-                RSVP
+              {t("rsvp")}
               </a>
+
+              <div className="flex justify-end p-4">
+  <select
+    onChange={(e) => i18n.changeLanguage(e.target.value)}
+    className="border rounded p-1"
+  >
+    <option value="en">🇺🇸 English</option>
+    <option value="fr">🇫🇷 French</option>
+    {/* <option value="sw">🇰🇪 Swahili</option> */}
+  </select>
+</div>
+
             </div>
           </motion.div>
         )}
@@ -84,6 +111,9 @@ const Navbar = () => {
 };
 
 const HomePage = () => {
+
+  const { t, i18n } = useTranslation();
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -131,9 +161,10 @@ const HomePage = () => {
         </div>
 
         <div className="relative z-10 text-center p-8">
-          <h1 className="text-2xl font-serif mb-14 text-white">Arnold Uwamwezi  &  Haven Gezai</h1>
-          <p className="text-4xl  text-white/90 mb-10 font-serif ">Save The Date</p>
-          <p className="text-2xl font-normal text-white/90 mb-10">14th February 2026</p>
+          <h1 className="text-2xl font-serif mb-14 text-white">{t('hero.title')}
+</h1>
+          <p className="text-4xl  text-white/90 mb-10 font-serif ">{t('hero.subtitle')}</p>
+          <p className="text-2xl font-normal text-white/90 mb-10"> {t('hero.date')}</p>
           
           {/* Countdown Timer */}
           <div className="flex gap-8 justify-center">
@@ -152,14 +183,14 @@ const HomePage = () => {
         <div className="max-w-6xl mx-auto flex items-center justify-center">
           <div className="w-1/4 h-px bg-gray-300"></div>
           <div className="px-8 text-center">
-            <h2 className="text-3xl font-serif mb-8">See how it all started</h2>
+            <h2 className="text-3xl font-serif mb-8">{t("See how it all started")}</h2>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/our-story'}
               className="bg-primary text-white px-8 py-3 text-lg hover:bg-black/90 transition-colors"
             >
-              Our Story
+              {t("ourStoryButton")}
             </motion.button>
           </div>
           <div className="w-1/4 h-px bg-gray-300"></div>
@@ -182,12 +213,12 @@ const HomePage = () => {
         </div>
         <div className="flex items-center justify-center p-12 bg-white">
           <div className="max-w-md">
-            <h2 className="text-5xl font-serif mb-8 text-primary">Ceremony</h2>
+            <h2 className="text-5xl font-serif mb-8 text-primary">{t('ceremony.title')}</h2>
             <div className="space-y-2 text-secondary">
-              <p className="text-2xl mb-6">10:00 AM</p>
-              Click on the link below: <a href="https://phaneroo.org/ministry-profile/"><p className="font-bold  text-primary" > Phaneroo Ministry</p></a>
+              {/* <p className="text-2xl mb-6">10:00 AM</p> */}
+              {t('ceremony.link')}: <a href="https://phaneroo.org/ministry-profile/"><p className="font-bold  text-primary" > {t('ceremony.place')}</p></a>
             
-              <p className="mb-6">Kampala, Uganda</p>
+              <p className="mb-6">{t('ceremony.location')}</p>
               {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
               </a> */}
@@ -209,11 +240,11 @@ const HomePage = () => {
         </div>
         <div className="flex items-center justify-center p-12 bg-white md:order-1">
           <div className="max-w-md">
-            <h2 className="text-5xl font-serif mb-8 text-primary">Reception</h2>
+            <h2 className="text-5xl font-serif mb-8 text-primary">{t('reception.title')}</h2>
             <div className="space-y-2 text-secondary">
-              <p className="text-2xl mb-6">4:30 PM - 11:00 PM</p>
-              Click on the link below:<a href="https://hotel360.co.ug/"><p className="  font-bold  text-primary" >Hotel 360, Entebbe Road</p></a>
-              <p className="mb-6">Kampala, Uganda</p>
+              {/* <p className="text-2xl mb-6">4:30 PM - 11:00 PM</p> */}
+              {t('reception.link')}:<a href="https://hotel360.co.ug/"><p className="  font-bold  text-primary" >{t('reception.place')}</p></a>
+              <p className="mb-6">{t('reception.location')}</p>
               {/* <a href="#map" className="text-primary hover:text-secondary underline transition-colors">
                 Map
               </a> */}
@@ -229,7 +260,7 @@ const HomePage = () => {
   transition={{ duration: 1 }}
   className="min-h-screen relative flex items-center justify-center"
 >
-  <div className="absolute inset-0 px-8 py-12">
+  <div className="absolute inset-0 px-4 py-12">
     <div className="relative h-full w-full overflow-hidden">
       <img 
         src="./gallery/wed15.jpg"
@@ -240,22 +271,22 @@ const HomePage = () => {
     </div>
   </div>
   
-  <div className="relative z-10 text-center space-y-8">
+  <div className="relative z-10 text-center space-y-6">
     <motion.h2 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-      className="text-2xl font-light text-white"
+      className="text-4xl font-light text-white"
     >
-      Join Us
+      {t("joinUs")}
     </motion.h2>
     <motion.h1
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 2, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="text-6xl font-serif text-white"
+      className="text-3xl font-serif text-white"
     >
-      We hope you can make it!
+      {t('hope')}
     </motion.h1>
     <motion.a
       href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
@@ -268,7 +299,7 @@ const HomePage = () => {
       transition={{ delay: 0.6 }}
       className="inline-block bg-white text-primary px-12 py-3 text-lg font-medium hover:bg-gray-100 transition-colors rounded-full"
     >
-      RSVP
+      {t('rsvp')}
     </motion.a>
   </div>
 </motion.section>
@@ -303,18 +334,18 @@ const HomePage = () => {
       {/* Travel Section */}
       <section id="travel" className="py-20 px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 text-center text-primary">Travel & Accommodation</h2>
+          <h2 className="text-4xl font-serif mb-12 text-center text-primary">{t('travel.title')}</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl text-primary">Getting Here</h3>
+              <h3 className="text-2xl text-primary">{t('travel.gettingHere')}</h3>
               <div className="space-y-4 text-secondary">
-                <p>Nearest Airports:</p>
+                <p>{t('travel.airports')}:</p>
                 <ul className="list-disc pl-5">
-                  <li>Entebbe International Airport(20 miles)</li>
+                  <li>Entebbe International Airport</li>
                   {/* <li>Regional Airport (10 miles)</li> */}
                 </ul>
               </div>
@@ -325,15 +356,15 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl text-primary">Where to Stay</h3>
+              <h3 className="text-2xl text-primary">{t('travel.whereToStay')}</h3>
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg shadow-lg">
-                  <h4 className="text-primary"> Entebbe International Airport</h4>
+                  <h4 className="text-primary"> {t('travel.comingSoon')}</h4>
                   {/* <p className="text-secondary">Special rate: $199/night</p> */}
                 </div>
-                <div className="p-4 bg-white rounded-lg shadow-lg">
-                  <h4 className="text-primary">Boutique Inn</h4>
-                  {/* <p className="text-secondary">Special rate: $159/night</p> */}
+                <div className="">
+                  {/* <h4 className="text-primary">Boutique Inn</h4>
+                  <p className="text-secondary">Special rate: $159/night</p> */}
                 </div>
               </div>
             </motion.div>
