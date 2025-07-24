@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
-// import GallerySectionChina from './GallerySectionChina';
+import GallerySectionChina from './GallerySectionChina';
 
 import { useTranslation } from 'react-i18next';
 
@@ -74,7 +74,7 @@ const OurStoryPage = () => {
 
        {/* Gallery Section */}
        
-       {/* <GallerySectionChina /> */}
+       <GallerySectionChina />
 
       {/* Return Home Button */}
       {/* <section className="pb-20 text-center">

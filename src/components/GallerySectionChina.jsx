@@ -37,24 +37,24 @@ const GallerySectionChina = () => {
     },
     {
       id: 6,
-      src: './gallery1/china18.jpg',
+      src: './gallery1/china17.jpg',
       // alt: 'Casual couple photo',
     },
-    {
-      id: 7,
-      src: './gallery1/china19.jpg',
-      // alt: 'Casual couple photo',
-    },
-    {
-      id: 8,
-      src: './gallery1/china20.jpg',
-      // alt: 'Casual couple photo',
-    },
-    {
-      id: 9,
-      src: './gallery1/china21.jpg',
-      // alt: 'Casual couple photo',
-    }
+    // {
+    //   id: 7,
+    //   src: './gallery1/china18.jpg',
+    //   // alt: 'Casual couple photo',
+    // },
+    // {
+    //   id: 8,
+    //   src: './gallery1/china19.jpg',
+    //   // alt: 'Casual couple photo',
+    // },
+    // {
+    //   id: 9,
+    //   src: './gallery1/china20.jpg',
+    //   // alt: 'Casual couple photo',
+    // }
   ];
 
   return (

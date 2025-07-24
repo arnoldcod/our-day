@@ -80,10 +80,11 @@ const Navbar = () => {
             className="fixed inset-0 z-40 bg-white pt-16 md:hidden"
           >
             <div className="flex flex-col items-center space-y-6 p-8">
-              <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
-              <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
-  {t("Details")}
+            <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
+  {t("Home")}
 </a>
+              <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
+              
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Gallery")}</a>
               {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
               <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a>
