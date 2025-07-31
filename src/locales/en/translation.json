@@ -3,7 +3,12 @@
     "hero": {
         "title": "Arnold Uwamwezi & Haven Gezai",
         "subtitle": "Save The Date",
-        "date": "14th February 2026"
+        "date": "14th February 2026",
+        "months": "Months",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
       },
       "ourStoryButton": "Our Story",
       "ceremony": {
@@ -22,6 +27,7 @@
       "hope": "We hope you can make it!",
       "travel": {
         "title": "Travel & Accommodation",
+        "click": "CLICK HERE FOR MORE DETAILS",
         "gettingHere": "Getting Here",
         "airports": "Nearest Airports:",
         "whereToStay": "Where to Stay",

@@ -116,6 +116,7 @@ const HomePage = () => {
   const { t, i18n } = useTranslation();
 
   const [timeLeft, setTimeLeft] = useState({
+    months: 0,
     days: 0,
     hours: 0,
     minutes: 0,
@@ -129,6 +130,7 @@ const HomePage = () => {
       const difference = weddingDate - now;
 
       setTimeLeft({
+        months: Math.floor(difference / (1000 * 60 * 60 * 24 * 30)),
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
@@ -342,7 +344,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl text-primary">{t('travel.gettingHere')}</h3>
+              {/* <h3 className="text-2xl text-primary">{t('travel.gettingHere')}</h3> */}
               <div className="space-y-4 text-secondary">
                 <p>{t('travel.airports')}:</p>
                 <ul className="list-disc pl-5">
@@ -357,10 +359,11 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl text-primary">{t('travel.whereToStay')}</h3>
+              <a href=""> <h3 className="text-2xl text-primary">{t('travel.whereToStay')}</h3></a>
               <div className="space-y-4">
                 <div className="p-4 bg-white rounded-lg shadow-lg">
-                  <h4 className="text-primary"> {t('travel.comingSoon')}</h4>
+                  <a href="https://www.zola.com/wedding/arnoldandhaven"> <h4 className="text-white bg-primary">{t('travel.click')}</h4></a>
+                  
                   {/* <p className="text-secondary">Special rate: $199/night</p> */}
                 </div>
                 <div className="">

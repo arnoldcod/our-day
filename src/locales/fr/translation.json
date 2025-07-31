@@ -4,6 +4,7 @@
         "title": "Arnold Uwamwezi & Haven Gezai",
         "subtitle": "Réservez la date",
         "date": "14 Février 2026",
+        "months": "Mois",
         "days": "Jours",
         "hours": "Heures",
         "minutes": "Minutes",
@@ -26,6 +27,7 @@
       "hope": "Nous espérons que vous pourrez venir !",
       "travel": {
         "title": "Voyage & Hébergement",
+        "click": "CLIQUEZ ICI POUR PLUS DES DÉTAILS",
         "gettingHere": "Comment venir",
         "airports": "Aéroports les plus proches :",
         "whereToStay": "Où séjourner",
