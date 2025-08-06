@@ -116,7 +116,7 @@ const HomePage = () => {
   const { t, i18n } = useTranslation();
 
   const [timeLeft, setTimeLeft] = useState({
-    months: 0,
+    // months: 0,
     days: 0,
     hours: 0,
     minutes: 0,
@@ -130,7 +130,7 @@ const HomePage = () => {
       const difference = weddingDate - now;
 
       setTimeLeft({
-        months: Math.floor(difference / (1000 * 60 * 60 * 24 * 30)),
+        
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
