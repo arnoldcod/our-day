@@ -45,7 +45,7 @@ const Navbar = () => {
               <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors"> {t("ourStoryButton")}</a>
               {/* <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a> */}
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">{t("Gallery")}</a>
-              {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
+              <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
               <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-1 rounded-full text-lg">
                 {t("rsvp")}
@@ -86,7 +86,7 @@ const Navbar = () => {
               <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
               
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Gallery")}</a>
-              {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
+              <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t('registry.title')}</a>
               <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
               {t("rsvp")}
@@ -311,70 +311,98 @@ const HomePage = () => {
       {/* Gallery Section */}
       <GallerySection />
 
-      {/* Registry Section */}
-      {/* <section id="registry" className="bg-primary/5 py-20 px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif mb-8 text-primary">Gift Registry</h2>
-          <p className="text-secondary mb-12">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we&apos;ve registered at the following stores:</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Crate & Barrel', 'Williams-Sonoma', 'Amazon'].map((store) => (
-              <motion.div
-                key={store}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="p-6 bg-white rounded-lg shadow-lg"
-              >
-                <h3 className="text-xl mb-4 text-primary">{store}</h3>
-                <button className="text-secondary hover:text-primary transition-colors">
-                  View Registry
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+    
+         {/* Registry Section */}
+         <section id="registry" className="bg-primary/5 py-20 px-8">
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-4xl font-serif mb-8 text-primary">{t('registry.title')}</h2>
+    <p className="text-secondary mb-6">
+    {t('registry.text')}
+    </p>
+    <p className="text-secondary mb-6">
+    {t('registry.text1')}
+    </p>
+    <div className="bg-white rounded-lg shadow-lg p-6 inline-block mt-4 text-left">
+      <h3 className="text-xl text-primary font-semibold mb-2">{t('registry.text2')}</h3>
+      <p className="text-secondary"><strong>Option 1</strong> </p>
+      <p className="text-secondary"><strong>{t('registry.text3')}</strong> Bank Of Kigali</p>
+      <p className="text-secondary"><strong>{t('registry.text4')}</strong> Arnold Uwamwezi</p>
+      <p className="text-secondary"><strong>{t('registry.text5')}</strong> 1002 2778 9818</p>
+      <p className="text-secondary"><strong>{t('registry.text6')}</strong> Remera Branch, Kigali</p>
+      <p className="text-secondary"><strong>{t('registry.text7')}</strong> RW18040100227789818646 </p>
+      <p className="text-secondary"><strong>{t('registry.text8')}</strong> BKIGRWRW </p>
+
+      {/* <p className="text-secondary mt-4">
+  For international transfers, please use the information below:
+</p> */}
+
+<div className="my-4" />
+     
+
+<p className="text-secondary"><strong>Option 2</strong> </p>
+     <p className="text-secondary"><strong>{t('registry.text9')}</strong> Arnold Uwamwezi : +250 7940 017 26 </p>
+    
+      
+
+      <p className="text-secondary mt-4 italic">{t('registry.text10')} <br /> Arnold & Haven</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Travel Section */}
       <section id="travel" className="py-20 px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif mb-12 text-center text-primary">{t('travel.title')}</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="space-y-6"
-            >
-              {/* <h3 className="text-2xl text-primary">{t('travel.gettingHere')}</h3> */}
-              <div className="space-y-4 text-secondary">
-                <p>{t('travel.airports')}:</p>
-                <ul className="list-disc pl-5">
-                  <li>Entebbe International Airport</li>
-                  {/* <li>Regional Airport (10 miles)</li> */}
-                </ul>
-              </div>
-            </motion.div>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-serif mb-12 text-center text-primary">{t('travel.title')}</h2>
+    <div className="grid md:grid-cols-2 gap-12">
+      
+      {/* Travel Info */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="space-y-6"
+      >
+        <div className="space-y-4 text-secondary">
+          <p className="text-lg font-medium">{t('travel.airports')}:</p>
+          <ul className="list-disc pl-5">
+            <li>Entebbe International Airport</li>
+          </ul>
+        </div>
+      </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="space-y-6"
+      {/* Where to Stay + CTA */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="space-y-6"
+      >
+        <div className="space-y-4">
+          <h3 className="text-2xl text-primary">{t('travel.whereToStay')}</h3>
+
+          <div className="p-6 bg-white rounded-lg shadow-lg text-center">
+            <p className="text-secondary mb-4">
+            {t('travel.text1')}
+               <p className="text-red-500 mt-4">
+               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header">{t('travel.text2')}</a>
+               </p>
+            </p>
+
+            <a
+              href="https://www.zola.com/wedding/arnoldandhaven"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-primary/60 hover:scale-105 cursor-pointer"
             >
-              <a href=""> <h3 className="text-2xl text-primary">{t('travel.whereToStay')}</h3></a>
-              <div className="space-y-4">
-                <div className="p-4 bg-white rounded-lg shadow-lg">
-                  <a href="https://www.zola.com/wedding/arnoldandhaven"> <h4 className="text-white bg-primary">{t('travel.click')}</h4></a>
-                  
-                  {/* <p className="text-secondary">Special rate: $199/night</p> */}
-                </div>
-                <div className="">
-                  {/* <h4 className="text-primary">Boutique Inn</h4>
-                  <p className="text-secondary">Special rate: $159/night</p> */}
-                </div>
-              </div>
-            </motion.div>
+              🌍 Explore Where to Stay
+            </a>
           </div>
         </div>
-      </section>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
+
 
 
     </div>

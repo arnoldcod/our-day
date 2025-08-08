@@ -31,7 +31,23 @@
         "gettingHere": "Getting Here",
         "airports": "Nearest Airports:",
         "whereToStay": "Where to Stay",
+        "text1": "We have gathered some great accommodation options to make your stay comfortable. Click below to explore and book, However if you want to book earlier, please fill the rsvp form and we will get back to you.",
+        "text2": "Click here to view RSVP Form",
         "comingSoon": "Coming Soon"
+      },
+      "registry": {
+        "title": "Gift Registry",
+        "text": "Your love, prayers, and presence at our wedding mean the world to us ... they are truly the greatest gifts we could ask for.",
+        "text1": "If you would like to bless us with a contribution as we begin this beautiful journey together, we would be deeply grateful.",
+        "text2": "Bank Details:",
+        "text3": "Bank Name:",
+        "text4": "Account Name:",
+        "text5": "Account Number:",
+        "text6": "Branch:",
+        "text7": "Iban Number:",
+        "text8": "Swift Code:",
+        "text9": "Mobile Money (MOMO) Name & Number",
+        "text10": "With love and gratitude,"
       },
     "rsvp": "Please RSVP",
     "Save The Date": "Save The Date",
