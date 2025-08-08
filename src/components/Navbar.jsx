@@ -41,10 +41,10 @@ const changeLanguage = (lng) => {
   <span className="text-white/50 px-1">|</span>
   <button onClick={() => i18n.changeLanguage('fr')} className="text-sm px-2">FR</button>
 </div>
-              {/* <a href="/our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a> */}
+              <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
               {/* <a href="/#details" className="text-white/50 hover:text-secondary transition-colors">Details</a> */}
               <a href="/#gallery" className="text-white/50 hover:text-secondary transition-colors">Home</a>
-              {/* <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a> */}
+              <a href="./registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
               {/* <a href="/#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a> */}
               <a
   href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
@@ -87,12 +87,12 @@ const changeLanguage = (lng) => {
                 <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
   {t("Home")}
 </a>
-              <a href="#story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
+              <a href="./our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
               {/* <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
   {t("Details")}
 </a> */}
-              <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Our Photos in China")}</a>
-              {/* <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">Registry</a> */}
+              {/* <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Our Photos in China")}</a> */}
+              <a href="./registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t('registry.title')}</a>
               {/* <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a> */}
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
               {t("rsvp")}

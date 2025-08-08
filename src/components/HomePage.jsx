@@ -45,7 +45,7 @@ const Navbar = () => {
               <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors"> {t("ourStoryButton")}</a>
               {/* <a href="#details" className="text-white/50 hover:text-secondary transition-colors">Details</a> */}
               <a href="#gallery" className="text-white/50 hover:text-secondary transition-colors">{t("Gallery")}</a>
-              <a href="#registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
+              <a href="./registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
               <a href="#travel" className="text-white/50 hover:text-secondary transition-colors">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-1 rounded-full text-lg">
                 {t("rsvp")}
@@ -86,7 +86,7 @@ const Navbar = () => {
               <a href="/our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
               
               <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Gallery")}</a>
-              <a href="#registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t('registry.title')}</a>
+              <a href="./registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t('registry.title')}</a>
               <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
               {t("rsvp")}
@@ -199,6 +199,29 @@ const HomePage = () => {
           <div className="w-1/4 h-px bg-gray-300"></div>
         </div>
       </section>
+
+    
+
+      {/* Registry Section */}
+      <section className="py-32 px-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-center">
+          <div className="w-1/4 h-px bg-gray-300"></div>
+          <div className="px-8 text-center">
+            <h2 className="text-3xl font-serif mb-8">{t("registry.title")}</h2>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/registry'}
+              className="bg-primary text-white px-8 py-3 text-lg hover:bg-black/90 transition-colors"
+            >
+              {t("registry.button")}
+            </motion.button>
+          </div>
+          <div className="w-1/4 h-px bg-gray-300"></div>
+        </div>
+      </section>
+
+
 
       {/* // Update the Event Details section in the HomePage component: */}
 
@@ -313,41 +336,7 @@ const HomePage = () => {
 
     
          {/* Registry Section */}
-         <section id="registry" className="bg-primary/5 py-20 px-8">
-  <div className="max-w-3xl mx-auto text-center">
-    <h2 className="text-4xl font-serif mb-8 text-primary">{t('registry.title')}</h2>
-    <p className="text-secondary mb-6">
-    {t('registry.text')}
-    </p>
-    <p className="text-secondary mb-6">
-    {t('registry.text1')}
-    </p>
-    <div className="bg-white rounded-lg shadow-lg p-6 inline-block mt-4 text-left">
-      <h3 className="text-xl text-primary font-semibold mb-2">{t('registry.text2')}</h3>
-      <p className="text-secondary"><strong>Option 1</strong> </p>
-      <p className="text-secondary"><strong>{t('registry.text3')}</strong> Bank Of Kigali</p>
-      <p className="text-secondary"><strong>{t('registry.text4')}</strong> Arnold Uwamwezi</p>
-      <p className="text-secondary"><strong>{t('registry.text5')}</strong> 1002 2778 9818</p>
-      <p className="text-secondary"><strong>{t('registry.text6')}</strong> Remera Branch, Kigali</p>
-      <p className="text-secondary"><strong>{t('registry.text7')}</strong> RW18040100227789818646 </p>
-      <p className="text-secondary"><strong>{t('registry.text8')}</strong> BKIGRWRW </p>
-
-      {/* <p className="text-secondary mt-4">
-  For international transfers, please use the information below:
-</p> */}
-
-<div className="my-4" />
-     
-
-<p className="text-secondary"><strong>Option 2</strong> </p>
-     <p className="text-secondary"><strong>{t('registry.text9')}</strong> Arnold Uwamwezi : +250 7940 017 26 </p>
-    
-      
-
-      <p className="text-secondary mt-4 italic">{t('registry.text10')} <br /> Arnold & Haven</p>
-    </div>
-  </div>
-</section>
+        
 
 
       {/* Travel Section */}
@@ -402,8 +391,14 @@ const HomePage = () => {
     </div>
   </div>
 </section>
-
-
+      {/* Footer */}
+      <footer className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-secondary text-sm">
+            &copy; {new Date().getFullYear()} Arnold & Haven. All rights reserved.
+          </p>
+        </div>
+      </footer>
 
     </div>
   );
