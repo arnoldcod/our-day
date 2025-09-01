@@ -203,7 +203,7 @@ const HomePage = () => {
     
 
       {/* Registry Section */}
-      <section className="py-32 px-8">
+{/*       <section className="py-32 px-8">
         <div className="max-w-6xl mx-auto flex items-center justify-center">
           <div className="w-1/4 h-px bg-gray-300"></div>
           <div className="px-8 text-center">
@@ -219,7 +219,7 @@ const HomePage = () => {
           </div>
           <div className="w-1/4 h-px bg-gray-300"></div>
         </div>
-      </section>
+      </section> */}
 
 
 
