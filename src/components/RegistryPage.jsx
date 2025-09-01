@@ -64,11 +64,15 @@ const RegistryPage = () => {
             </p>
 
             <p className="my-4 text-secondary italic">
-              {t('registry.contactNote')}
+              {/* {t('registry.contactNote')} */}
             </p>
 
             <p className="text-secondary">
-              <strong>{t('registry.text9')}</strong> Arnold Uwamwezi : +250 7940 017 26
+              <strong>{t('registry.text9')}</strong>: Arnold Uwamwezi  +250 7940 017 26
+            </p>
+
+            <p className="text-secondary">
+              <strong>{t('registry.text99')}</strong>: Arnold Uwamwezi  +256 749 002 710
             </p>
 
             <p className="text-secondary mt-4 italic">
