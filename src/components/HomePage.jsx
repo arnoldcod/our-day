@@ -290,7 +290,7 @@ const HomePage = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 shadow-lg text-white"
+              className="bg-gradient-to-br from-green-800 to-green-950 rounded-2xl p-8 shadow-lg text-white"
             >
               <h3 className="text-2xl sm:text-3xl font-serif mb-6">{t('travel.whereToStay')}</h3>
               <p className="mb-6 text-white/90 leading-relaxed">
@@ -309,7 +309,7 @@ const HomePage = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-white text-primary font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-xl"
               >
-                🌍 {t('travel.whereToStay')}
+                 {t('travel.whereToStay')}
               </motion.a>
             </motion.div>
           </div>

@@ -11,17 +11,17 @@ const OurStoryPage = () => {
     {
       title: t("How We Met"),
       content: t("HowWeMet_Paragraph"),
-      icon: "💫"
+      icon: ""
     },
     {
       title: t("Building Life Together"),
       content: t("BuildingLifeTogether_Paragraph"),
-      icon: "🌏"
+      icon: ""
     },
     {
       title: t("The Proposal"),
       content: t("TheProposal_Paragraph"),
-      icon: "💍"
+      icon: ""
     }
   ];
 
