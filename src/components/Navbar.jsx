@@ -1,26 +1,57 @@
-// Navbar.js
-import { useTranslation } from 'react-i18next';
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showLangMenu, setShowLangMenu] = useState(false);
+
   const { t, i18n } = useTranslation();
-
-const changeLanguage = (lng) => {
-  i18n.changeLanguage(lng);
-};
-
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: t("Home"), path: '/', hash: '#hero' },
+    { name: t("ourStoryButton"), path: '/our-story' },
+    { name: t("Gallery"), path: '/', hash: '#gallery' },
+    { name: t('registry.title'), path: '/registry' },
+    { name: t("travel.title"), path: '/', hash: '#travel' },
+  ];
+
+  const handleNavClick = (path, hash) => {
+    setIsMobileMenuOpen(false);
+    if (path === '/') {
+      navigate('/');
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      navigate(path);
+    }
+  };
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'ti', name: 'ትግርኛ', flag: '🇪🇷' },
+  ];
+
+  const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   return (
     <>
@@ -28,36 +59,97 @@ const changeLanguage = (lng) => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled || isMobileMenuOpen ? 'bg-white shadow-lg' : 'bg-transparent'
+          isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-gradient-to-b from-black/50 to-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <a href="/" className="text-white/50 font-serif text-xl">A&H</a>
-            
-            <div className="hidden md:flex items-center space-x-8">
-            <div className=" text-white/50 md:flex  top-4 items-center space-x-4">
-  <button onClick={() => i18n.changeLanguage('en')} className="text-sm px-2">EN</button>
-  <span className="text-white/50 px-1">|</span>
-  <button onClick={() => i18n.changeLanguage('fr')} className="text-sm px-2">FR</button>
-</div>
-              <a href="./our-story" className="text-white/50 hover:text-secondary transition-colors">Our Story</a>
-              {/* <a href="/#details" className="text-white/50 hover:text-secondary transition-colors">Details</a> */}
-              <a href="/#gallery" className="text-white/50 hover:text-secondary transition-colors">Home</a>
-              <a href="./registry" className="text-white/50 hover:text-secondary transition-colors">Registry</a>
-              {/* <a href="/#travel" className="text-white/50 hover:text-secondary transition-colors">Travel</a> */}
-              <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
-  className="bg-primary text-white px-6 py-2 rounded-full text-lg"
->
-  {t('rsvp')}
-</a>
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <motion.a
+              href="/"
+              whileHover={{ scale: 1.05 }}
+              className={`font-serif text-2xl font-bold ${
+                isScrolled || isMobileMenuOpen ? 'text-primary' : 'text-white'
+              }`}
+            >
+              A & H
+            </motion.a>
 
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => handleNavClick(link.path, link.hash)}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isScrolled || isMobileMenuOpen ? 'text-gray-700' : 'text-white/90'
+                  }`}
+                >
+                  {link.name}
+                </button>
+              ))}
+
+              {/* Language Switcher */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowLangMenu(!showLangMenu)}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
+                    isScrolled || isMobileMenuOpen
+                      ? 'text-gray-700 hover:bg-gray-100'
+                      : 'text-white/90 hover:bg-white/10'
+                  }`}
+                >
+                  <GlobeAltIcon className="h-5 w-5" />
+                  <span className="text-sm">{currentLang.flag}</span>
+                </button>
+
+                <AnimatePresence>
+                  {showLangMenu && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50"
+                    >
+                      {languages.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => {
+                            i18n.changeLanguage(lang.code);
+                            setShowLangMenu(false);
+                          }}
+                          className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors flex items-center space-x-2 ${
+                            i18n.language === lang.code ? 'bg-primary/10 text-primary' : 'text-gray-700'
+                          }`}
+                        >
+                          <span>{lang.flag}</span>
+                          <span>{lang.name}</span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* RSVP Button */}
+              <motion.a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-lg"
+              >
+                {t("rsvp")}
+              </motion.a>
             </div>
 
-            <button 
+            {/* Mobile Menu Button */}
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white/50"
+              className={`md:hidden transition-colors ${
+                isScrolled || isMobileMenuOpen ? 'text-primary' : 'text-white'
+              }`}
             >
               {isMobileMenuOpen ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,45 +166,60 @@ const changeLanguage = (lng) => {
       </motion.nav>
 
       {/* Mobile Menu */}
-       {/* Mobile Menu */}
-       <AnimatePresence>
+      <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white pt-16 md:hidden"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'tween' }}
+            className="fixed inset-0 z-40 bg-white md:hidden"
           >
-            <div className="flex flex-col items-center space-y-6 p-8">
-                <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
-  {t("Home")}
-</a>
-              <a href="./our-story" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("ourStoryButton")}</a>
-              {/* <a href="#details" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">
-  {t("Details")}
-</a> */}
-              {/* <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("Our Photos in China")}</a> */}
-              <a href="./registry" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t('registry.title')}</a>
-              {/* <a href="#travel" onClick={() => setIsMobileMenuOpen(false)} className="text-primary text-lg">{t("travel.title")}</a> */}
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="bg-primary text-white px-6 py-2 rounded-full text-lg">
-              {t("rsvp")}
-              </a>
+            <div className="flex flex-col h-full pt-24 px-8">
+              <div className="flex flex-col space-y-6">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => handleNavClick(link.path, link.hash)}
+                    className="text-primary text-xl font-medium text-left hover:text-primary/70 transition-colors"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+              </div>
 
-              <div className="flex justify-end p-4">
-  <select
-    onChange={(e) => i18n.changeLanguage(e.target.value)}
-    className="border rounded p-1"
-  >
-    <option value="en">🇺🇸 English</option>
-    <option value="fr">🇫🇷 French</option>
-    {/* <option value="sw">🇰🇪 Swahili</option> */}
-  </select>
-</div>
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-sm text-gray-500 mb-3">Select Language</p>
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      i18n.changeLanguage(lang.code);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors flex items-center space-x-3 ${
+                      i18n.language === lang.code ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    <span className="text-2xl">{lang.flag}</span>
+                    <span>{lang.name}</span>
+                  </button>
+                ))}
+              </div>
 
+              <motion.a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileTap={{ scale: 0.95 }}
+                className="mt-8 bg-primary text-white px-6 py-3 rounded-full text-center font-medium shadow-lg"
+              >
+                {t("rsvp")}
+              </motion.a>
             </div>
           </motion.div>
         )}
-      </AnimatePresence> 
+      </AnimatePresence>
     </>
   );
 };
