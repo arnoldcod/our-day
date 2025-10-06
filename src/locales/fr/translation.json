@@ -35,7 +35,7 @@
         "text2": "Veuillez cliquer ici pour accéder au formulaire RSVP",
         "comingSoon": "À venir"
       },
-      "registry": {  
+      "registry": {
           "title": "Liste de Cadeaux",
           "text": "Votre amour, vos prières et votre présence à notre mariage signifient énormément pour nous... ce sont vraiment les plus beaux cadeaux que nous puissions recevoir.",
           "text1": "Si vous souhaitez nous bénir par une contribution alors que nous commençons ce magnifique voyage ensemble, nous vous en serions profondément reconnaissants.",
@@ -46,15 +46,19 @@
           "text6": "Agence :",
           "text7": "Numéro IBAN :",
           "text8": "Code SWIFT :",
-          "text9": "Mobile Money (RW-MOMO) Nom et Numéro",
-          "text99": "Airtel Money (UG) Nom et Numéro",
-         "text10": "Avec amour et gratitude,"  
+          "text9": "MTN Rwanda (MoMo)",
+          "text99": "Airtel Ouganda",
+          "zelle": "Zelle",
+          "zelleEmail": "E-mail",
+          "zelleContact": "Nom et Numéro",
+         "text10": "Avec amour et gratitude,"
       },
     "rsvp": "Veuillez confirmer votre présence",
     "See how it all started": "Découvrez comment tout a commencé",
     "Details": "Détails",
     "Gallery": "Galerie",
     "Registry": "Liste de cadeaux",
+    "Itinerary": "Programme",
     "Click on the link below:": "Cliquez sur le lien ci-dessous :",
   
     "How We Met": "Comment nous nous sommes rencontrés",
@@ -67,6 +71,13 @@
     "TheProposal_Paragraph": "Puis est venue la plus belle des surprises.\n\nFin 2023, Haven avait une mission de travail au Kenya , un pays qui avait une signification particulière pour Arnold. Il avait déjà décidé que c’est là qu’il demanderait Haven en mariage.\n\nLe 15 décembre 2023, Arnold a fait sa demande. Ce fut un choc total pour Haven, qui a dit oui avec des larmes de joie. Elle avait longtemps prié pour un homme comme Arnold, et en cet instant, elle a vu ses prières exaucées.\n\nDepuis ce jour, ils continuent à avancer ensemble, main dans la main, même si la vie continue d’évoluer. Haven a entamé un nouveau chapitre à Washington, D.C., et Arnold a commencé un programme d’apprentissage pour se développer professionnellement. Ensemble, ils ont traversé des transitions, la distance et l’inconnu .. mais jamais seuls.\n\nIls rendent toute la gloire à Dieu, qui est le fondement de leur relation. C’est Sa patience, Sa force et Sa grâce qui les ont soutenus durant deux années d’amour à distance et qui continuent de les guider vers ce nouveau chapitre, côte à côte.",
   
     "Our Photos in China": "Nos photos en Chine",
-    "Home": "Retourner"
+    "Home": "Retourner",
+
+    "theme": {
+        "verse": "Un homme seul peut être vaincu, mais à deux, on peut se défendre. Une corde à trois brins ne se rompt pas facilement.",
+        "reference": "Ecclésiaste 4:12",
+        "title": "Une Corde à Trois Brins",
+        "subtitle": "Unis par l'Amour, Fortifiés par Dieu"
+    }
   }
   

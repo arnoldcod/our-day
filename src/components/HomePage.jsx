@@ -91,6 +91,160 @@ const HomePage = () => {
         </div>
       </motion.section>
 
+      {/* Theme Verse Section */}
+      <section className="relative py-16 sm:py-20 px-4 sm:px-8 overflow-hidden bg-white">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          {/* Main Verse Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100"
+          >
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src="./ecc.jpg"
+                alt="Theme background"
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay for better text readability */}
+              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 p-6 sm:p-8 md:p-10">
+              {/* Scripture Quote */}
+              <motion.blockquote
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center mb-6"
+              >
+                <p className="text-lg sm:text-xl md:text-2xl font-serif text-gray-800 leading-relaxed mb-4 italic">
+                  &ldquo;{t('theme.verse')}&rdquo;
+                </p>
+                <cite className="text-base sm:text-lg md:text-xl text-gray-600 not-italic font-light">
+                  — {t('theme.reference')}
+                </cite>
+              </motion.blockquote>
+
+              {/* Decorative Divider */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-center my-6"
+              >
+                <div className="h-px bg-gray-300 flex-1 max-w-xs"></div>
+                <div className="mx-4">
+                  <svg className="w-5 h-5 text-primary/60" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+                  </svg>
+                </div>
+                <div className="h-px bg-gray-300 flex-1 max-w-xs"></div>
+              </motion.div>
+
+              {/* Theme Statement */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <p className="text-xl sm:text-2xl md:text-3xl font-serif text-primary mb-2">
+                  {t('theme.title')}
+                </p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 font-light tracking-wide">
+                  {t('theme.subtitle')}
+                </p>
+              </motion.div>
+
+              {/* Animated Three Strands Visual */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                viewport={{ once: true }}
+                className="flex justify-center items-center mt-8 space-x-2"
+              >
+                <motion.div
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 60 }}
+                  transition={{ duration: 0.8, delay: 1.2 }}
+                  viewport={{ once: true }}
+                  className="w-1 bg-primary/60 rounded-full"
+                ></motion.div>
+                <motion.div
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 80 }}
+                  transition={{ duration: 0.8, delay: 1.3 }}
+                  viewport={{ once: true }}
+                  className="w-1.5 bg-primary rounded-full"
+                ></motion.div>
+                <motion.div
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 60 }}
+                  transition={{ duration: 0.8, delay: 1.4 }}
+                  viewport={{ once: true }}
+                  className="w-1 bg-primary/60 rounded-full"
+                ></motion.div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Floating Animation Elements */}
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary rounded-full blur-sm"
+        ></motion.div>
+        <motion.div
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0.15, 0.3, 0.15]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+          className="absolute top-1/3 right-1/3 w-2 h-2 bg-primary rounded-full blur-sm"
+        ></motion.div>
+        <motion.div
+          animate={{
+            y: [0, -25, 0],
+            opacity: [0.2, 0.35, 0.2]
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary rounded-full blur-sm"
+        ></motion.div>
+      </section>
+
       {/* Our Story Section */}
       <section className="py-24 sm:py-32 px-4 sm:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">

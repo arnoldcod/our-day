@@ -1,5 +1,18 @@
 {
     "welcome": "Karibu kwenye harusi yetu",
-    "rsvp": "Tafadhali thibitisha kuhudhuria hapa chini"
+    "rsvp": "Tafadhali thibitisha kuhudhuria hapa chini",
+
+    "registry": {
+        "zelle": "Zelle",
+        "zelleEmail": "Barua pepe",
+        "zelleContact": "Jina na Nambari"
+    },
+
+    "theme": {
+        "verse": "Mtu mmoja anaweza kushindwa, lakini wawili wanaweza kujitetea. Kamba ya nyuzi tatu haivunjiki kwa urahisi.",
+        "reference": "Mhubiri 4:12",
+        "title": "Kamba ya Nyuzi Tatu",
+        "subtitle": "Tumefungwa Pamoja kwa Upendo, Imara kwa Mungu"
+    }
   }
   

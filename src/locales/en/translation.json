@@ -46,8 +46,11 @@
         "text6": "Branch:",
         "text7": "Iban Number:",
         "text8": "Swift Code:",
-        "text9": "Mobile Money (RW-MOMO) Name & Number",
-        "text99": "Airtel Money (UG) Name & Number",
+        "text9": "MTN Rwanda (MoMo)",
+        "text99": "Airtel Uganda",
+        "zelle": "Zelle",
+        "zelleEmail": "Email",
+        "zelleContact": "Name & Number",
         "text10": "With love and gratitude,"
       },
     "rsvp": "Please RSVP",
@@ -64,6 +67,7 @@
     "Details": "Details",
     "Gallery": "Gallery",
     "Registry": "Registry",
+    "Itinerary": "Itinerary",
     "Click on the link below:": "Click on the link below:",
 
         "How We Met": "How We Met",
@@ -76,10 +80,13 @@
         "TheProposal_Paragraph":"Then came the most beautiful surprise.\n\nAt the end of 2023, Haven had a work assignment in Kenya , a country that held personal significance for Arnold. He had already decided that Kenya would be the place where he would ask Haven to marry him.\n\nOn December 15, 2023, Arnold proposed. It was a complete shock to Haven, who said yes through tears and joy. She had long prayed for a man like Arnold, and in that moment, she saw those prayers answered.\n\nSince then, they’ve continued to walk through life hand in hand, even as life keeps evolving. Haven began a new chapter in Washington, D.C. and Arnold started an apprenticeship program to grow professionally. Together, they’ve faced transitions, distance, and the unknown but never alone.\n\nThey give all glory to God, who has been the foundation of their relationship. It is His patience, strength, and grace that have sustained them through two years of long-distance love and continue to lead them into this next chapter, side by side.",
 
     "Our Photos in China": "Our Photos in China",
-    "Home": "Home"
+    "Home": "Home",
 
-    
-
-      
+    "theme": {
+        "verse": "Though one may be overpowered, two can defend themselves. A cord of three strands is not quickly broken.",
+        "reference": "Ecclesiastes 4:12",
+        "title": "A Cord of Three Strands",
+        "subtitle": "Bound Together by Love, Strengthened by God"
+    }
   }
   

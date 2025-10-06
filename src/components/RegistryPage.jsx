@@ -30,6 +30,11 @@ const RegistryPage = () => {
     },
   ];
 
+  const zelleDetails = {
+    email: 'havengezai@gmail.com',
+    contact: 'Haven Gezai +1 206 446 7390'
+  };
+
   return (
     <div className="min-h-screen bg-white text-primary">
       <Navbar />
@@ -125,6 +130,95 @@ const RegistryPage = () => {
                 <p className="text-lg font-medium">{option.value}</p>
               </div>
             ))}
+          </motion.div>
+
+          {/* Zelle Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mb-12"
+          >
+            <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-black rounded-3xl shadow-2xl overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/40 rounded-full blur-2xl"></div>
+
+              <div className="relative z-10 p-8 sm:p-12">
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center space-x-4">
+                    <motion.div
+                      animate={{ rotate: [0, 5, -5, 0] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-4"
+                    >
+                      <svg className="h-10 w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                      </svg>
+                    </motion.div>
+                    <div>
+                      <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-wide">
+                        {t('registry.zelle')}
+                      </h3>
+                      <p className="text-purple-200 text-sm mt-1">Fast & Easy Payment</p>
+                    </div>
+                  </div>
+
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.7, 1, 0.7]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="hidden sm:block"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-30 blur-xl"></div>
+                  </motion.div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                    className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="flex items-center space-x-3 mb-3">
+                      <svg className="h-6 w-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <p className="text-purple-200 text-sm font-medium">{t('registry.zelleEmail')}</p>
+                    </div>
+                    <p className="text-white text-lg font-semibold break-all">{zelleDetails.email}</p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="flex items-center space-x-3 mb-3">
+                      <svg className="h-6 w-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <p className="text-purple-200 text-sm font-medium">{t('registry.zelleContact')}</p>
+                    </div>
+                    <p className="text-white text-lg font-semibold">{zelleDetails.contact}</p>
+                  </motion.div>
+                </div>
+
+                {/* Animated bottom accent */}
+                <motion.div
+                  animate={{
+                    scaleX: [0.8, 1, 0.8],
+                    opacity: [0.3, 0.6, 0.3]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="mt-8 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-full"
+                />
+              </div>
+            </div>
           </motion.div>
 
           {/* Closing Message */}
