@@ -26,7 +26,7 @@
       "joinUs": "Rejoignez-nous",
       "hope": "Nous espérons que vous pourrez venir !",
       "travel": {
-        "title": "Voyage & Hébergement",
+        "title": "Voyage",
         "click": "CLIQUEZ ICI POUR PLUS DES DÉTAILS",
         "gettingHere": "Comment venir",
         "airports": "Aéroports les plus proches :",
@@ -59,6 +59,7 @@
     "Gallery": "Galerie",
     "Registry": "Liste de cadeaux",
     "Itinerary": "Programme",
+    "Accommodation": "Hébergement",
     "Click on the link below:": "Cliquez sur le lien ci-dessous :",
   
     "How We Met": "Comment nous nous sommes rencontrés",
@@ -78,6 +79,60 @@
         "reference": "Ecclésiaste 4:12",
         "title": "Une Corde à Trois Brins",
         "subtitle": "Unis par l'Amour, Fortifiés par Dieu"
+    },
+
+    "accommodation": {
+        "title": "Hébergement pour nos invités",
+        "subtitle": "Nous sommes ravis d'accueillir nos proches du monde entier",
+        "welcome": "Nous sommes ravis d'accueillir nos proches voyageant des États-Unis, d'Europe, du Rwanda et de toute l'Ouganda pour célébrer notre mariage avec nous !",
+        "venue": {
+            "title": "Notre mariage aura lieu à"
+        },
+        "luxury": {
+            "title": "Hôtels à Kampala",
+            "subtitle": "Si vous recherchez confort, élégance et service de classe mondiale, nous recommandons les hôtels suivants :"
+        },
+        "hotels": {
+            "latitude": {
+                "description": "Un hôtel-boutique élégant surplombant le lac Victoria, alliant design moderne et charme ougandais. Idéal pour les invités qui apprécient l'art, la détente et les équipements de luxe."
+            },
+            "lePetit": {
+                "description": "Charme d'inspiration française dans un cadre paisible. Cet hôtel dispose d'un spa, d'une piscine et d'une gastronomie raffinée — parfait pour les invités recherchant un séjour serein et élégant."
+            },
+            "sheraton": {
+                "description": "Une marque mondiale Marriott offrant des chambres de luxe, une piscine sur le toit et à proximité des meilleurs restaurants et boutiques du centre de Kampala."
+            },
+            "protea": {
+                "description": "Situé sur la colline de Naguru avec une vue imprenable sur la ville, cet hôtel est connu pour ses standards élevés, son design moderne et sa proximité avec de nombreuses attractions de la ville."
+            },
+            "hotel360": {
+                "description": "Notre lieu de mariage propose également un hébergement confortable. Les invités qui y séjournent profiteront de la commodité d'être exactement là où se déroule la célébration, entourés de vues panoramiques sur la colline de Ndejje.",
+                "discount": "🎁 Offre spéciale : Nous avons négocié une réduction de 8 % par chambre pour tous les invités du mariage séjournant à l'Hôtel 360° pendant le week-end du mariage.",
+                "rooms": "L'hôtel dispose de 30 chambres au total, donc plus tôt vous nous contactez, mieux nous pourrons vous aider à réserver votre séjour."
+            }
+        },
+        "specialOffer": "Lieu du mariage ✨",
+        "nearby": {
+            "title": "Hébergements recommandés à proximité",
+            "frontPage": {
+                "type": "Économique, proche du lieu"
+            },
+            "house": {
+                "type": "Maison de style Airbnb idéale pour les familles ou les groupes"
+            },
+            "guesthouses": {
+                "type": "Séjours courts abordables et confortables à 10-20 minutes du lieu"
+            }
+        },
+        "travelTip": {
+            "title": "Conseil de voyage",
+            "content": "Si vous arrivez en avion, votre point d'arrivée sera l'aéroport international d'Entebbe (EBB) — environ 45 à 60 minutes de Kampala selon le trafic.",
+            "recommendation": "Nous vous recommandons de réserver votre hébergement tôt et de nous informer de l'endroit où vous séjournerez afin que nous puissions coordonner les options de transport plus près de la date du mariage."
+        },
+        "closing": {
+            "message": "Vous êtes chaleureusement les bienvenus à Kampala",
+            "excitement": "Nous avons hâte de célébrer ce jour spécial avec vous !"
+        }
     }
   }
   

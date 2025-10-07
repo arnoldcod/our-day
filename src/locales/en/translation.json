@@ -26,7 +26,7 @@
       "joinUs": "Join Us",
       "hope": "We hope you can make it!",
       "travel": {
-        "title": "Travel & Accommodation",
+        "title": "Travel",
         "click": "CLICK HERE FOR MORE DETAILS",
         "gettingHere": "Getting Here",
         "airports": "Nearest Airports:",
@@ -68,6 +68,7 @@
     "Gallery": "Gallery",
     "Registry": "Registry",
     "Itinerary": "Itinerary",
+    "Accommodation": "Accommodation",
     "Click on the link below:": "Click on the link below:",
 
         "How We Met": "How We Met",
@@ -87,6 +88,60 @@
         "reference": "Ecclesiastes 4:12",
         "title": "A Cord of Three Strands",
         "subtitle": "Bound Together by Love, Strengthened by God"
+    },
+
+    "accommodation": {
+        "title": "Accommodation for Our Wedding Guests",
+        "subtitle": "We're so excited to welcome our loved ones from around the world",
+        "welcome": "We're so excited to welcome our loved ones traveling from the U.S., Europe, Rwanda, and across Uganda to celebrate our wedding with us!",
+        "venue": {
+            "title": "Our wedding will take place at"
+        },
+        "luxury": {
+            "title": "Hotels in Kampala",
+            "subtitle": "If you're looking for comfort, elegance, and world-class service, we recommend the following hotels:"
+        },
+        "hotels": {
+            "latitude": {
+                "description": "A stylish boutique hotel overlooking Lake Victoria, combining modern design with Ugandan charm. Ideal for guests who enjoy art, relaxation, and luxury amenities."
+            },
+            "lePetit": {
+                "description": "French-inspired charm in a quiet setting. This hotel features a spa, pool, and gourmet dining — perfect for guests wanting a serene and elegant stay."
+            },
+            "sheraton": {
+                "description": "A global Marriott brand offering luxury rooms, a rooftop pool, and proximity to central Kampala's best restaurants and shopping."
+            },
+            "protea": {
+                "description": "Located on Naguru Hill with breathtaking city views, this hotel is known for its high standards, modern design, and proximity to many city attractions."
+            },
+            "hotel360": {
+                "description": "Our wedding venue also offers comfortable accommodation. Guests staying here will enjoy the convenience of being right where the celebration takes place, surrounded by scenic views of Ndejje Hill.",
+                "discount": "🎁 Special Offer: We have arranged an 8% discount per room for all wedding guests staying at Hotel 360° during the wedding weekend.",
+                "rooms": "The hotel has 30 rooms in total, so the earlier you contact us, the better we can help reserve your stay."
+            }
+        },
+        "specialOffer": "Wedding Venue ✨",
+        "nearby": {
+            "title": "Recommended Nearby Stays",
+            "frontPage": {
+                "type": "Budget-friendly, close to venue"
+            },
+            "house": {
+                "type": "Airbnb-style home ideal for families or groups"
+            },
+            "guesthouses": {
+                "type": "Affordable and comfortable short stays within 10–20 minutes of the venue"
+            }
+        },
+        "travelTip": {
+            "title": "Travel Tip",
+            "content": "If you're flying in, your arrival point will be Entebbe International Airport (EBB) — approximately 45–60 minutes from Kampala depending on traffic.",
+            "recommendation": "We recommend booking your stay early and informing us where you'll be staying so we can coordinate transport options closer to the wedding date."
+        },
+        "closing": {
+            "message": "You are warmly welcome to Kampala",
+            "excitement": "We can't wait to celebrate this special day with you!"
+        }
     }
   }
   

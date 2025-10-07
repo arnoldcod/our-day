@@ -26,7 +26,8 @@ const Navbar = () => {
     { name: t("Home"), path: '/', hash: '#hero' },
     { name: t("ourStoryButton"), path: '/our-story' },
     // { name: t("Itinerary"), path: '/itinerary' },
-    { name: t("Gallery"), path: '/', hash: '#gallery' },
+    { name: t("Accommodation"), path: '/accommodation' },
+    // { name: t("Gallery"), path: '/', hash: '#gallery' },
     { name: t('registry.title'), path: '/registry' },
     { name: t("travel.title"), path: '/', hash: '#travel' },
   ];
