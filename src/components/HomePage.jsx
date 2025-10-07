@@ -431,7 +431,14 @@ const HomePage = () => {
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
                         <span className="w-2 h-2 bg-primary rounded-full"></span>
-                        <span>Entebbe International Airport</span>
+                        <a
+                          href="https://www.google.com/maps/place/Entebbe+International+Airport/@0.0418629,32.4435261,17z"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors cursor-pointer underline"
+                        >
+                          Entebbe International Airport
+                        </a>
                       </li>
                     </ul>
                   </div>

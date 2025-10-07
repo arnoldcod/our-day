@@ -231,6 +231,66 @@ const AccommodationPage = () => {
         </div>
       </section>
 
+      {/* Airbnb Section */}
+      <section className="py-20 px-4 sm:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <HomeModernIcon className="h-12 w-12 text-primary mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-serif text-primary mb-4">
+              House Or Rental
+            </h2>
+            <div className="w-20 h-1 bg-primary mx-auto"></div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200"
+          >
+            <div className="p-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="p-3 rounded-xl bg-primary/10">
+                      <HomeModernIcon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-serif text-primary">
+                      AIRBNB
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Airbnb provides excellent options for house rentals. Kololo, Ntinda, Muyenga and Munyonyo all provide excellent locations for rental.
+              </p>
+
+              <motion.a
+                href="https://www.airbnb.com/s/Kampala--Uganda/homes"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center space-x-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <span>Browse Airbnb in Kampala</span>
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Nearby Stays Section */}
       {/* <section className="py-20 px-4 sm:px-8 bg-white">
         <div className="max-w-5xl mx-auto">

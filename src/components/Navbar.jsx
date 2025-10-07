@@ -29,7 +29,6 @@ const Navbar = () => {
     { name: t("Accommodation"), path: '/accommodation' },
     // { name: t("Gallery"), path: '/', hash: '#gallery' },
     { name: t('registry.title'), path: '/registry' },
-    { name: t("travel.title"), path: '/', hash: '#travel' },
   ];
 
   const handleNavClick = (path, hash) => {
