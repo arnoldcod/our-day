@@ -462,16 +462,14 @@ const HomePage = () => {
                   {t('travel.text2')}
                 </a>
               </p>
-              <motion.a
-                href="https://www.zola.com/wedding/arnoldandhaven"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => window.location.href = '/accommodation'}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-white text-primary font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-xl"
               >
                  {t('travel.whereToStay')}
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
         </div>

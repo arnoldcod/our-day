@@ -133,6 +133,217 @@
             "message": "Vous êtes chaleureusement les bienvenus à Kampala",
             "excitement": "Nous avons hâte de célébrer ce jour spécial avec vous !"
         }
+    },
+
+    "travelGuide": {
+        "title": "Guide de Voyage & des Visiteurs",
+        "subtitle": "Rejoignez-nous à Kampala, Ouganda",
+        "date": "14 Février 2026 • Tout ce que vous devez savoir pour un voyage inoubliable",
+        "welcome": {
+            "title": "Nous sommes ravis de vous accueillir !",
+            "pearlOfAfrica": "Perle de l'Afrique",
+            "description1": "L'Ouganda est appelée la",
+            "description2": "pour de bonnes raisons - les gens sont incroyablement accueillants, le temps est magnifique, et nous avons hâte de partager ce lieu spécial avec vous.",
+            "description3": "Que vous arriviez de l'étranger ou d'un pays voisin, voici tout ce dont vous avez besoin pour rendre votre voyage fluide et agréable."
+        },
+        "visa": {
+            "title": "Visa et Conditions d'Entrée",
+            "subtitle": "Se rendre en Ouganda est plus facile que vous ne le pensez ! Choisissez l'option qui vous convient le mieux.",
+            "eastAfrican": {
+                "title": "Pour les invités d'Afrique de l'Est",
+                "region": "(Rwanda, Kenya, Tanzanie, Burundi)",
+                "req1": "Pas de visa nécessaire !",
+                "req2": "Apportez simplement votre passeport ou carte d'identité nationale",
+                "req3": "Carte de vaccination contre la fièvre jaune requise",
+                "req4": "Voyage en bus : 8-10 heures depuis Kigali",
+                "badge": "Sans Visa !"
+            },
+            "ugandaTourist": {
+                "title": "Visa Touristique Ougandais",
+                "region": "Pour les Invités Internationaux",
+                "req1": "Coût : 50 USD pour entrée simple",
+                "req2": "Valide pour 90 jours",
+                "req3": "Postulez en ligne sur visas.immigration.go.ug",
+                "req4": "Parfait si vous visitez uniquement l'Ouganda"
+            },
+            "eastAfricanTourist": {
+                "title": "Visa Touristique Est-Africain",
+                "region": "Recommandé pour les Explorateurs",
+                "req1": "Coût : 100 USD",
+                "req2": "Valide 90 jours entrées multiples",
+                "req3": "Accès Ouganda, Kenya et Rwanda",
+                "req4": "Parfait pour combiner safari, observation des gorilles et mariage !",
+                "badge": "Recommandé"
+            },
+            "applicationTips": {
+                "title": "Conseils pour la Demande de Visa",
+                "tip1": "Passeport valide 6+ mois au-delà des dates de voyage",
+                "tip2": "Billet retour ou continuation requis",
+                "tip3": "Détails de l'hébergement (cliquez pour voir les options)",
+                "tip4": "Postulez au moins 2 semaines avant le voyage"
+            },
+            "cta": {
+                "title": "Prêt à Demander Votre Visa ?",
+                "description": "Commencez votre demande de visa en ligne maintenant. Le processus est simple et direct !",
+                "button": "Demander un Visa Ougandais",
+                "portal": "visas.immigration.go.ug - Portail Officiel de l'Immigration Ougandaise"
+            }
+        },
+        "health": {
+            "title": "Exigences Sanitaires",
+            "yellowFever": "Certificat de vaccination contre la fièvre jaune",
+            "malaria": "Médicament de prévention du paludisme",
+            "insurance": "Assurance voyage",
+            "required": "Requis",
+            "recommended": "Recommandé",
+            "note": "Note :",
+            "noteText": "Consultez votre médecin 4-6 semaines avant le voyage pour des conseils de santé personnalisés et les vaccinations nécessaires."
+        },
+        "gettingTo": {
+            "title": "Se rendre à Kampala",
+            "flight": {
+                "title": "Vol vers l'Aéroport d'Entebbe",
+                "item1": "Aéroport International d'Entebbe (EBB)",
+                "item2": "40 km de Kampala (1-2 heures de route)",
+                "item3": "Taxis de l'aéroport : 30-40 USD",
+                "item4": "Uber/Bolt également disponibles",
+                "tip": "Conseil :",
+                "tipText": "Le trafic peut être dense aux heures de pointe (7h-10h, 17h-20h)"
+            },
+            "bus": {
+                "title": "Bus depuis le Rwanda/Kenya",
+                "item1": "Principaux opérateurs : Jaguar, Trinity, Modern Coast",
+                "item2": "Depuis Kigali : 8-10 heures",
+                "item3": "Coût : Environ 15-25 USD",
+                "item4": "Départ : Gare routière de Nyabugogo",
+                "tip": "Conseil :",
+                "tipText": "Réservez les billets à l'avance pendant les périodes chargées"
+            }
+        },
+        "apps": {
+            "title": "Applications Essentielles à Télécharger",
+            "subtitle": "Téléchargez-les avant votre arrivée pour faciliter votre séjour !",
+            "safeBoda": {
+                "name": "SafeBoda",
+                "description": "Motos-taxis - le plus rapide dans le trafic !"
+            },
+            "uber": {
+                "name": "Uber / SafeCar / Faras",
+                "description": "Courses en voiture n'importe où"
+            },
+            "maps": {
+                "name": "Google Maps",
+                "description": "Navigation qui fonctionne très bien"
+            },
+            "whatsapp": {
+                "name": "WhatsApp",
+                "description": "Tout le monde l'utilise ici"
+            },
+            "mobileMoney": {
+                "name": "MTN MoMo / Airtel Money",
+                "description": "Argent mobile (comme Venmo)"
+            }
+        },
+        "money": {
+            "title": "Questions d'Argent",
+            "currency": {
+                "title": "Monnaie",
+                "name": "Shilling Ougandais (UGX)",
+                "rate": "Taux actuel : ~3 600 UGX = 1 USD"
+            },
+            "payment": {
+                "title": "Modes de Paiement",
+                "cash": "L'argent liquide est roi en Ouganda",
+                "cards": "Cartes acceptées dans les grands hôtels",
+                "mobile": "L'argent mobile est étonnamment pratique"
+            },
+            "atm": {
+                "title": "DAB et Change",
+                "forex": "Meilleurs taux de change dans les bureaux de change à Kampala",
+                "forexNote": "(meilleurs que les taux de l'aéroport)",
+                "atmText": "DAB largement disponibles (Stanbic & Standard Chartered recommandés)"
+            },
+            "tipping": {
+                "title": "Pourboires",
+                "text": "10% dans les restaurants si les frais de service ne sont pas inclus"
+            }
+        },
+        "packing": {
+            "title": "Que Emporter",
+            "items": {
+                "sunscreen": "Crème solaire SPF 30+",
+                "repellent": "Répulsif anti-insectes avec DEET",
+                "jacket": "Veste de pluie légère ou parapluie",
+                "adapter": "Adaptateur type G (prise UK)",
+                "shoes": "Chaussures de marche confortables",
+                "sweater": "Pull léger pour les soirées"
+            },
+            "weather": {
+                "title": "Météo en Février",
+                "daytime": {
+                    "label": "Journée",
+                    "temp": "25-30°C (77-88°F)",
+                    "desc": "Chaud et agréable"
+                },
+                "evening": {
+                    "label": "Soirée",
+                    "temp": "17-18°C (63-65°F)",
+                    "desc": "Plus frais, apportez un pull"
+                },
+                "rain": {
+                    "label": "Précipitations",
+                    "temp": "Averses occasionnelles",
+                    "desc": "Fin de la saison sèche"
+                }
+            }
+        },
+        "cultural": {
+            "title": "Conseils Culturels",
+            "subtitle": "Comprendre les coutumes locales vous aidera à vous connecter avec la chaleur de la culture ougandaise",
+            "tips": {
+                "greetings": "Les salutations comptent - prenez le temps de saluer les gens correctement",
+                "time": "Heure ougandaise - les événements commencent souvent 30-60 min en retard",
+                "bargaining": "Marchandage attendu aux marchés (commencez à 50%)",
+                "photos": "Demandez toujours avant de photographier les gens",
+                "language": "Apprenez Oli otya ? (Comment allez-vous ?) en Luganda",
+                "warmth": "Les Ougandais sont incroyablement chaleureux et amicaux !"
+            }
+        },
+        "safety": {
+            "title": "Rester en Sécurité et en Bonne Santé",
+            "tips": {
+                "safe": "Généralement sûr - Kampala accueille les touristes",
+                "valuables": "Utilisez les coffres-forts de l'hôtel pour les objets de valeur, évitez les bijoux voyants",
+                "transport": "Utilisez Uber/Bolt plutôt que de marcher la nuit",
+                "pharmacies": "Les pharmacies sont bien approvisionnées dans toute la ville",
+                "emergency": "Urgence : Police 999, Médical 911"
+            },
+            "foodWater": {
+                "title": "Sécurité Alimentaire et de l'Eau",
+                "water": "Restez sur l'eau en bouteille (disponible partout)",
+                "restaurants": "Les restaurants d'hôtels sont sûrs ; choisissez des stands de nourriture de rue animés",
+                "rolex": "Essayez le Rolex (chapati aux œufs) - la nourriture de rue préférée de l'Ouganda !"
+            }
+        },
+        "personalNote": {
+            "title": "Un Mot Personnel de Notre Part",
+            "pearlQuote": "L'Ouganda est appelée la",
+            "pearlText": "Perle de l'Afrique",
+            "pearlReason": "pour de bonnes raisons",
+            "text1": "Les gens sont incroyablement accueillants, le temps est magnifique, et nous avons hâte de partager ce lieu spécial avec vous.",
+            "text2": "Ne vous inquiétez pas si tout semble nouveau - les Ougandais sont serviables et la plupart parlent anglais. Nous organiserons également des activités de groupe pour les invités de l'extérieur afin d'explorer ensemble !",
+            "questions": "Questions sur le voyage ? Nous sommes là pour vous aider !",
+            "whatsapp": "WhatsApp",
+            "email": "Nous Envoyer un E-mail",
+            "whatsappLabel": "WhatsApp :",
+            "emailLabel": "E-mail :",
+            "signature": "À bientôt à Kampala !",
+            "closing": "Avec amour,",
+            "names": "Arnold & Haven"
+        },
+        "footer": {
+            "updated": "Dernière mise à jour : Janvier 2026"
+        }
     }
   }
   

@@ -142,6 +142,217 @@
             "message": "You are warmly welcome to Kampala",
             "excitement": "We can't wait to celebrate this special day with you!"
         }
+    },
+
+    "travelGuide": {
+        "title": "Travel & Visitor Guide",
+        "subtitle": "Join Us in Kampala, Uganda",
+        "date": "February 14th, 2026 • Everything you need to know for an unforgettable journey",
+        "welcome": {
+            "title": "We're So Excited to Welcome You!",
+            "pearlOfAfrica": "Pearl of Africa",
+            "description1": "Uganda is called the",
+            "description2": "for good reason - the people are incredibly welcoming, the weather is beautiful, and we can't wait to share this special place with you.",
+            "description3": "Whether you're flying in from abroad or traveling from a nearby country, here's everything you need to make your trip smooth and enjoyable."
+        },
+        "visa": {
+            "title": "Visa & Entry Requirements",
+            "subtitle": "Getting to Uganda is easier than you think! Choose the option that works best for you.",
+            "eastAfrican": {
+                "title": "For East African Guests",
+                "region": "(Rwanda, Kenya, Tanzania, Burundi)",
+                "req1": "No visa needed!",
+                "req2": "Just bring your passport or national ID",
+                "req3": "Yellow fever vaccination card required",
+                "req4": "Bus journey: 8-10 hours from Kigali",
+                "badge": "No Visa!"
+            },
+            "ugandaTourist": {
+                "title": "Uganda Tourist Visa",
+                "region": "For International Guests",
+                "req1": "Cost: $50 USD for single entry",
+                "req2": "Valid for 90 days",
+                "req3": "Apply online at visas.immigration.go.ug",
+                "req4": "Perfect if visiting Uganda only"
+            },
+            "eastAfricanTourist": {
+                "title": "East African Tourist Visa",
+                "region": "Recommended for Explorers",
+                "req1": "Cost: $100 USD",
+                "req2": "Valid for 90 days multiple entry",
+                "req3": "Access Uganda, Kenya & Rwanda",
+                "req4": "Perfect for combining safari, gorilla trekking & wedding!",
+                "badge": "Recommended"
+            },
+            "applicationTips": {
+                "title": "Visa Application Tips",
+                "tip1": "Passport valid for 6+ months beyond travel dates",
+                "tip2": "Return or onward ticket required",
+                "tip3": "Accommodation details (click to view options)",
+                "tip4": "Apply at least 2 weeks before travel"
+            },
+            "cta": {
+                "title": "Ready to Apply for Your Visa?",
+                "description": "Start your visa application online now. The process is simple and straightforward!",
+                "button": "Apply for Uganda Visa",
+                "portal": "visas.immigration.go.ug - Official Uganda Immigration Portal"
+            }
+        },
+        "health": {
+            "title": "Health Requirements",
+            "yellowFever": "Yellow Fever vaccination certificate",
+            "malaria": "Malaria prevention medication",
+            "insurance": "Travel insurance",
+            "required": "Required",
+            "recommended": "Recommended",
+            "note": "Note:",
+            "noteText": "Consult your doctor 4-6 weeks before travel for personalized health advice and necessary vaccinations."
+        },
+        "gettingTo": {
+            "title": "Getting to Kampala",
+            "flight": {
+                "title": "Flying to Entebbe Airport",
+                "item1": "Entebbe International Airport (EBB)",
+                "item2": "40km from Kampala (1-2 hour drive)",
+                "item3": "Airport taxis: $30-40 USD",
+                "item4": "Uber/Bolt also available",
+                "tip": "Tip:",
+                "tipText": "Traffic can be heavy during rush hours (7-10am, 5-8pm)"
+            },
+            "bus": {
+                "title": "Bus from Rwanda/Kenya",
+                "item1": "Main operators: Jaguar, Trinity, Modern Coast",
+                "item2": "From Kigali: 8-10 hours",
+                "item3": "Cost: Around $15-25 USD",
+                "item4": "Departure: Nyabugogo Bus Park",
+                "tip": "Tip:",
+                "tipText": "Book tickets in advance during busy periods"
+            }
+        },
+        "apps": {
+            "title": "Essential Apps to Download",
+            "subtitle": "Download these before you arrive to make your stay easier!",
+            "safeBoda": {
+                "name": "SafeBoda",
+                "description": "Motorcycle taxis - fastest through traffic!"
+            },
+            "uber": {
+                "name": "Uber / SafeCar / Faras",
+                "description": "Car rides anywhere"
+            },
+            "maps": {
+                "name": "Google Maps",
+                "description": "Navigation that works great"
+            },
+            "whatsapp": {
+                "name": "WhatsApp",
+                "description": "Everyone uses it here"
+            },
+            "mobileMoney": {
+                "name": "MTN MoMo / Airtel Money",
+                "description": "Mobile money (like Venmo)"
+            }
+        },
+        "money": {
+            "title": "Money Matters",
+            "currency": {
+                "title": "Currency",
+                "name": "Ugandan Shilling (UGX)",
+                "rate": "Current rate: ~3,600 UGX = $1 USD"
+            },
+            "payment": {
+                "title": "Payment Methods",
+                "cash": "Cash is king in Uganda",
+                "cards": "Cards accepted at major hotels",
+                "mobile": "Mobile money is surprisingly convenient"
+            },
+            "atm": {
+                "title": "ATMs & Exchange",
+                "forex": "Best exchange rates at forex bureaus in Kampala",
+                "forexNote": "(better than airport rates)",
+                "atmText": "ATMs widely available (Stanbic & Standard Chartered recommended)"
+            },
+            "tipping": {
+                "title": "Tipping",
+                "text": "10% at restaurants if service charge not included"
+            }
+        },
+        "packing": {
+            "title": "What to Pack",
+            "items": {
+                "sunscreen": "Sunscreen SPF 30+",
+                "repellent": "Insect repellent with DEET",
+                "jacket": "Light rain jacket or umbrella",
+                "adapter": "Type G power adapter (UK plug)",
+                "shoes": "Comfortable walking shoes",
+                "sweater": "Light sweater for evenings"
+            },
+            "weather": {
+                "title": "Weather in February",
+                "daytime": {
+                    "label": "Daytime",
+                    "temp": "25-30°C (77-88°F)",
+                    "desc": "Warm and pleasant"
+                },
+                "evening": {
+                    "label": "Evening",
+                    "temp": "17-18°C (63-65°F)",
+                    "desc": "Cooler, bring a sweater"
+                },
+                "rain": {
+                    "label": "Rainfall",
+                    "temp": "Occasional showers",
+                    "desc": "End of dry season"
+                }
+            }
+        },
+        "cultural": {
+            "title": "Cultural Tips",
+            "subtitle": "Understanding local customs will help you connect with the warmth of Ugandan culture",
+            "tips": {
+                "greetings": "Greetings matter - take time to greet people properly",
+                "time": "Uganda time - events often start 30-60 min late",
+                "bargaining": "Bargaining expected at markets (start at 50%)",
+                "photos": "Always ask before photographing people",
+                "language": "Learn Oli otya? (How are you?) in Luganda",
+                "warmth": "Ugandans are incredibly warm and friendly!"
+            }
+        },
+        "safety": {
+            "title": "Staying Safe & Healthy",
+            "tips": {
+                "safe": "Generally safe - Kampala is welcoming to tourists",
+                "valuables": "Use hotel safes for valuables, avoid flashy jewelry",
+                "transport": "Use Uber/Bolt rather than walking at night",
+                "pharmacies": "Pharmacies are well-stocked throughout the city",
+                "emergency": "Emergency: Police 999, Medical 911"
+            },
+            "foodWater": {
+                "title": "Food & Water Safety",
+                "water": "Stick to bottled water (available everywhere)",
+                "restaurants": "Hotel restaurants are safe; choose busy street food stalls",
+                "rolex": "Try Rolex (chapati with eggs) - Uganda's favorite street food!"
+            }
+        },
+        "personalNote": {
+            "title": "A Personal Note from Us",
+            "pearlQuote": "Uganda is called the",
+            "pearlText": "Pearl of Africa",
+            "pearlReason": "for good reason",
+            "text1": "The people are incredibly welcoming, the weather is beautiful, and we can't wait to share this special place with you.",
+            "text2": "Don't worry if everything feels new - Ugandans are helpful and most speak English. We'll also be arranging group activities for out-of-town guests to explore together!",
+            "questions": "Questions about travel? We're here to help!",
+            "whatsapp": "WhatsApp",
+            "email": "Email Us",
+            "whatsappLabel": "WhatsApp:",
+            "emailLabel": "Email:",
+            "signature": "See you in Kampala!",
+            "closing": "With love,",
+            "names": "Arnold & Haven"
+        },
+        "footer": {
+            "updated": "Last updated: January 2026"
+        }
     }
   }
   

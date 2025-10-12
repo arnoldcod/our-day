@@ -43,7 +43,145 @@ const OurStoryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center px-4"
           >
-            <HeartIcon className="h-16 w-16 text-white mx-auto mb-6" />
+            {/* Animated Heart Icon Container */}
+            <div className="relative inline-flex items-center justify-center mb-6">
+              {/* Outer pulsing glow */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute inset-0 bg-red-500/40 rounded-full blur-2xl"
+              ></motion.div>
+
+              {/* Middle glow ring */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.5, 0.8, 0.5]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3
+                }}
+                className="absolute inset-0 bg-pink-400/30 rounded-full blur-xl"
+              ></motion.div>
+
+              {/* Floating particles */}
+              <motion.div
+                animate={{
+                  y: [-20, -40, -20],
+                  x: [-5, 5, -5],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -top-8 left-1/4 w-2 h-2 bg-white rounded-full"
+              ></motion.div>
+              <motion.div
+                animate={{
+                  y: [-15, -35, -15],
+                  x: [5, -5, 5],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
+                }}
+                className="absolute -top-6 right-1/4 w-2 h-2 bg-pink-300 rounded-full"
+              ></motion.div>
+              <motion.div
+                animate={{
+                  y: [-10, -30, -10],
+                  x: [0, -8, 0],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 2.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+                className="absolute -top-4 left-1/2 w-1.5 h-1.5 bg-red-300 rounded-full"
+              ></motion.div>
+
+              {/* Main heart icon with pulse and fill animation */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="relative"
+              >
+                {/* Filled heart background */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    type: "spring"
+                  }}
+                  className="absolute inset-0"
+                >
+                  <HeartIcon className="h-16 w-16 text-red-500 fill-red-500/20" />
+                </motion.div>
+
+                {/* Outline heart */}
+                <HeartIcon className="h-16 w-16 text-white relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+              </motion.div>
+
+              {/* Sparkle effects */}
+              <motion.div
+                animate={{
+                  scale: [0, 1, 0],
+                  rotate: [0, 180, 360],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.8
+                }}
+                className="absolute -right-4 -top-4 text-white text-2xl"
+              >
+                ✨
+              </motion.div>
+              <motion.div
+                animate={{
+                  scale: [0, 1, 0],
+                  rotate: [0, -180, -360],
+                  opacity: [0, 1, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1.5
+                }}
+                className="absolute -left-4 -bottom-4 text-white text-xl"
+              >
+                ✨
+              </motion.div>
+            </div>
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white mb-4">
               {t("ourStoryButton")}
             </h1>
