@@ -32,7 +32,7 @@ const RegistryPage = () => {
 
   const zelleDetails = {
     email: 'havengezai@gmail.com',
-    contact: 'Haven Gezai +1 206 446 7390'
+    contact: 'Haven Gezai'
   };
 
   return (

@@ -50,7 +50,7 @@
           "text99": "Airtel Ouganda",
           "zelle": "Zelle",
           "zelleEmail": "E-mail",
-          "zelleContact": "Nom et Numéro",
+          "zelleContact": "Nom",
          "text10": "Avec amour et gratitude,"
       },
     "rsvp": "Veuillez confirmer votre présence",
@@ -204,7 +204,7 @@
             "flight": {
                 "title": "Vol vers l'Aéroport d'Entebbe",
                 "item1": "Aéroport International d'Entebbe (EBB)",
-                "item2": "40 km de Kampala (1-2 heures de route)",
+                "item2": "40 km de Kampala (1 heure de route)",
                 "item3": "Taxis de l'aéroport : 30-40 USD",
                 "item4": "Uber/Bolt également disponibles",
                 "tip": "Conseil :",

@@ -26,6 +26,105 @@ const TravelGuidePage = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  // Helper function to render primary color SVG icons
+  const renderIcon = (iconType, size = "h-16 w-16") => {
+    const icons = {
+      motorcycle: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.44 9.03L15.41 5H11v2h3.59l2 2H5c-2.8 0-5 2.2-5 5s2.2 5 5 5c2.46 0 4.45-1.69 4.9-4h1.65l2.77-2.77c-.21.54-.32 1.14-.32 1.77 0 2.8 2.2 5 5 5s5-2.2 5-5c0-2.65-1.97-4.77-4.56-4.97zM7.82 15C7.4 16.15 6.28 17 5 17c-1.63 0-3-1.37-3-3s1.37-3 3-3c1.28 0 2.4.85 2.82 2H5v2h2.82zM19 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+        </svg>
+      ),
+      car: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+        </svg>
+      ),
+      map: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+        </svg>
+      ),
+      food: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+        </svg>
+      ),
+      chat: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        </svg>
+      ),
+      money: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+        </svg>
+      ),
+      sun: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/>
+        </svg>
+      ),
+      bug: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
+        </svg>
+      ),
+      rain: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9.5 20c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm0-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm5 2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm0-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm-2 2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm0-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19.35 8.35C18.67 6.59 16.64 5 14.5 5c-1.48 0-2.79.62-3.73 1.61C10.53 6.23 10.03 6 9.5 6 8.12 6 7 7.12 7 8.5c0 .17.03.33.05.5H6.5C5.12 9 4 10.12 4 11.5S5.12 14 6.5 14h12c1.93 0 3.5-1.57 3.5-3.5 0-1.77-1.32-3.23-3.04-3.46-.02-.21-.06-.42-.11-.69z"/>
+        </svg>
+      ),
+      plug: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16.48 3L14 5.48 18.52 10 21 7.52 16.48 3zM13 6.5L5.5 14 3 11.5 2 12.5l4 4-3 3c-1.5 1.5-1.5 3.5 0 5s3.5 1.5 5 0l3-3 4 4 1-1-2.5-2.5 7.5-7.5L13 6.5z"/>
+        </svg>
+      ),
+      shoe: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 13c0-1.1-.9-2-2-2h-.54l-.95-9.49c-.09-.9-.83-1.51-1.73-1.51h-.17c-.72 0-1.33.52-1.45 1.23l-.56 3.27-.16 1-.14.78L13 3h-.75c-.72 0-1.33.52-1.45 1.23l-.14.78-.16 1-.56 3.27c-.12.71-.73 1.23-1.45 1.23h-.98v1h1.5l.25-.24.75-.76c.39-.39.9-.6 1.44-.6H14l1.32 7H17c1.1 0 2 .9 2 2h2c1.1 0 2-.9 2-2v-1c0-1.1-.9-2-2-2h-.54zM10.59 6.24c.13-.74-.28-1.45-1.02-1.57-.74-.13-1.45.28-1.57 1.02L7.46 8.5 7 11H4c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2v-4.05l1.09-6.73c.13-.74-.28-1.45-1.02-1.57z"/>
+        </svg>
+      ),
+      jacket: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 4l1.29 1.29-2.5 2.5L16 9V4zM19 19h1V8.5l-3-3V2h-2.55L12 4.45 9.55 2H7v3.5l-3 3V19h1v3h5v-3h2v3h5v-3zM9 6.21L12 3.21 15 6.21V19H9V6.21z"/>
+        </svg>
+      ),
+      hand: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        </svg>
+      ),
+      clock: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+        </svg>
+      ),
+      coins: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M15 16c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-3-11c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+        </svg>
+      ),
+      camera: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 15c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/>
+          <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+        </svg>
+      ),
+      language: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+        </svg>
+      ),
+      heart: (
+        <svg className={`${size} text-primary`} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      ),
+    };
+    return icons[iconType] || <div className="text-5xl text-center text-primary">{iconType}</div>;
+  };
+
   const visaOptions = [
     {
       title: t('travelGuide.visa.eastAfrican.title'),
@@ -73,29 +172,62 @@ const TravelGuidePage = () => {
   ];
 
   const essentialApps = [
-    { name: t('travelGuide.apps.safeBoda.name'), description: t('travelGuide.apps.safeBoda.description'), icon: "🏍️" },
-    { name: t('travelGuide.apps.uber.name'), description: t('travelGuide.apps.uber.description'), icon: "🚗" },
-    { name: t('travelGuide.apps.maps.name'), description: t('travelGuide.apps.maps.description'), icon: "🗺️" },
+    {
+      name: t('travelGuide.apps.safeBoda.name'),
+      description: t('travelGuide.apps.safeBoda.description'),
+      icon: "🏍️",
+      links: {
+        ios: "https://apps.apple.com/us/app/safeboda/id1181552651",
+        android: "https://play.google.com/store/apps/details?id=com.safeboda.passenger"
+      }
+    },
+    {
+      name: "Uber",
+      description: t('travelGuide.apps.uber.description'),
+      icon: "car",
+      links: {
+        ios: "https://apps.apple.com/us/app/uber-request-a-ride/id368677368",
+        android: "https://play.google.com/store/apps/details?id=com.ubercab"
+      }
+    },
+    {
+      name: t('travelGuide.apps.maps.name'),
+      description: t('travelGuide.apps.maps.description'),
+      icon: "🗺️",
+      links: {
+        ios: "https://apps.apple.com/us/app/google-maps/id585027354",
+        android: "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+      }
+    },
+    {
+      name: "Glovo",
+      description: "Food & grocery delivery",
+      icon: "food",
+      links: {
+        ios: "https://apps.apple.com/us/app/glovo-food-delivery-and-more/id958690619",
+        android: "https://play.google.com/store/apps/details?id=com.glovo"
+      }
+    },
     { name: t('travelGuide.apps.whatsapp.name'), description: t('travelGuide.apps.whatsapp.description'), icon: "💬" },
-    { name: t('travelGuide.apps.mobileMoney.name'), description: t('travelGuide.apps.mobileMoney.description'), icon: "💰" }
+    { name: t('travelGuide.apps.mobileMoney.name'), description: t('travelGuide.apps.mobileMoney.description'), icon: "money" }
   ];
 
   const packingList = [
-    { item: t('travelGuide.packing.items.sunscreen'), importance: t('travelGuide.health.recommended'), icon: "☀️" },
+    { item: t('travelGuide.packing.items.sunscreen'), importance: t('travelGuide.health.recommended'), icon: "sun" },
     { item: t('travelGuide.packing.items.repellent'), importance: t('travelGuide.health.recommended'), icon: "🦟" },
-    { item: t('travelGuide.packing.items.jacket'), importance: t('travelGuide.health.recommended'), icon: "🌧️" },
+    { item: t('travelGuide.packing.items.jacket'), importance: t('travelGuide.health.recommended'), icon: "rain" },
     { item: t('travelGuide.packing.items.adapter'), importance: t('travelGuide.health.recommended'), icon: "🔌" },
     { item: t('travelGuide.packing.items.shoes'), importance: t('travelGuide.health.recommended'), icon: "👟" },
     { item: t('travelGuide.packing.items.sweater'), importance: t('travelGuide.health.recommended'), icon: "🧥" }
   ];
 
   const culturalTips = [
-    { tip: t('travelGuide.cultural.tips.greetings'), icon: "👋" },
-    { tip: t('travelGuide.cultural.tips.time'), icon: "⏰" },
+    { tip: t('travelGuide.cultural.tips.greetings'), icon: "hand" },
+    { tip: t('travelGuide.cultural.tips.time'), icon: "clock" },
     { tip: t('travelGuide.cultural.tips.bargaining'), icon: "💰" },
-    { tip: t('travelGuide.cultural.tips.photos'), icon: "📸" },
-    { tip: t('travelGuide.cultural.tips.language'), icon: "🗣️" },
-    { tip: t('travelGuide.cultural.tips.warmth'), icon: "❤️" }
+    { tip: t('travelGuide.cultural.tips.photos'), icon: "camera" },
+    { tip: t('travelGuide.cultural.tips.language'), icon: "language" },
+    { tip: t('travelGuide.cultural.tips.warmth'), icon: "heart" }
   ];
 
   const safetyTips = [
@@ -413,7 +545,11 @@ const TravelGuidePage = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg"
             >
-              <div className="text-5xl mb-4">✈️</div>
+              <div className="mb-4">
+                <svg className="h-16 w-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                </svg>
+              </div>
               <h3 className="text-2xl font-serif text-primary mb-4">{t('travelGuide.gettingTo.flight.title')}</h3>
               <div className="space-y-3 text-gray-700">
                 <p className="flex items-start">
@@ -447,7 +583,11 @@ const TravelGuidePage = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg"
             >
-              <div className="text-5xl mb-4">🚌</div>
+              <div className="mb-4">
+                <svg className="h-16 w-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
+                </svg>
+              </div>
               <h3 className="text-2xl font-serif text-primary mb-4">{t('travelGuide.gettingTo.bus.title')}</h3>
               <div className="space-y-3 text-gray-700">
                 <p className="flex items-start">
@@ -508,9 +648,43 @@ const TravelGuidePage = () => {
                 whileHover={{ scale: 1.05, translateY: -5 }}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
-                <div className="text-5xl mb-4 text-center">{app.icon}</div>
+                {/* App Icon */}
+                <div className="mb-4 flex justify-center">
+                  {typeof app.icon === 'string' && app.icon.match(/[\u{1F000}-\u{1F9FF}]/u) ? (
+                    <div className="text-5xl text-center">{app.icon}</div>
+                  ) : (
+                    renderIcon(app.icon)
+                  )}
+                </div>
                 <h3 className="text-xl font-semibold text-primary mb-2 text-center">{app.name}</h3>
-                <p className="text-gray-600 text-center text-sm">{app.description}</p>
+                <p className="text-gray-600 text-center text-sm mb-4">{app.description}</p>
+
+                {app.links && (
+                  <div className="flex flex-col gap-2 mt-4">
+                    <a
+                      href={app.links.ios}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center space-x-2 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 text-gray-800 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-md border border-gray-300"
+                    >
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                      </svg>
+                      <span>App Store</span>
+                    </a>
+                    <a
+                      href={app.links.android}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium shadow-sm hover:shadow-md"
+                    >
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                      </svg>
+                      <span>Google Play</span>
+                    </a>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -631,7 +805,13 @@ const TravelGuidePage = () => {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <span className="text-4xl">{item.icon}</span>
+                  <div>
+                    {typeof item.icon === 'string' && item.icon.match(/[\u{1F000}-\u{1F9FF}]/u) ? (
+                      <span className="text-4xl">{item.icon}</span>
+                    ) : (
+                      renderIcon(item.icon, "h-12 w-12")
+                    )}
+                  </div>
                   <span className="text-xs px-3 py-1 rounded-full font-semibold bg-primary text-white">
                     {item.importance}
                   </span>
@@ -706,7 +886,13 @@ const TravelGuidePage = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-5xl mb-4 text-center">{tip.icon}</div>
+                <div className="mb-4 flex justify-center">
+                  {typeof tip.icon === 'string' && tip.icon.match(/[\u{1F000}-\u{1F9FF}]/u) ? (
+                    <div className="text-5xl">{tip.icon}</div>
+                  ) : (
+                    renderIcon(tip.icon)
+                  )}
+                </div>
                 <p className="text-gray-800 text-center leading-relaxed">{tip.tip}</p>
               </motion.div>
             ))}

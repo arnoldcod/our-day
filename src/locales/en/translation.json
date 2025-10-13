@@ -50,7 +50,7 @@
         "text99": "Airtel Uganda",
         "zelle": "Zelle",
         "zelleEmail": "Email",
-        "zelleContact": "Name & Number",
+        "zelleContact": "Name",
         "text10": "With love and gratitude,"
       },
     "rsvp": "Please RSVP",
@@ -213,7 +213,7 @@
             "flight": {
                 "title": "Flying to Entebbe Airport",
                 "item1": "Entebbe International Airport (EBB)",
-                "item2": "40km from Kampala (1-2 hour drive)",
+                "item2": "40km from Kampala (1 hour drive)",
                 "item3": "Airport taxis: $30-40 USD",
                 "item4": "Uber/Bolt also available",
                 "tip": "Tip:",
