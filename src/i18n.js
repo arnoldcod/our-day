@@ -5,6 +5,7 @@ import en from './locales/en/translation.json';
 import fr from './locales/fr/translation.json';
 import sw from './locales/sw/translation.json';
 import ti from './locales/ti/translation.json';
+import rw from './locales/rw/translation.json';
 
 i18n
   .use(initReactI18next)
@@ -14,6 +15,7 @@ i18n
       fr: { translation: fr },
       sw: { translation: sw },
       ti: { translation: ti },
+      rw: { translation: rw },
     },
     lng: 'en', // default
     fallbackLng: 'en',

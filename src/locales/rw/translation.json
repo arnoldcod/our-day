@@ -1,0 +1,357 @@
+{
+    "welcome": "Murakaza neza ku bukwe bwacu",
+    "hero": {
+        "title": "Arnold Uwamwezi & Haven Gezai",
+        "subtitle": "Bika Itariki",
+        "date": "Ku wa 14 Gashyantare 2026",
+        "months": "Amezi",
+        "days": "Iminsi",
+        "hours": "Amasaha",
+        "minutes": "Iminota",
+        "seconds": "Amasegonda"
+    },
+    "ourStoryButton": "Inkuru Yacu",
+    "ceremony": {
+        "title": "Seremoni",
+        "location": "Kampala, Ubugande",
+        "link": "Kanda kuri link ikurikira",
+        "place": "Phaneroo Ministry"
+    },
+    "reception": {
+        "title": "Ibirori",
+        "location": "Kampala, Ubugande",
+        "link": "Kanda kuri link ikurikira",
+        "place": "Hotel 360, Umuhanda wa Entebbe"
+    },
+    "joinUs": "Muduhere",
+    "hope": "Turizera ko muzashobora kuza!",
+    "travel": {
+        "title": "Urugendo",
+        "click": "KANDA HANO KUGIRA NGO UBONE AMAKURU YOSE",
+        "gettingHere": "Kugera hano",
+        "airports": "Ibicubga by'indege hafi:",
+        "whereToStay": "Aho Uba",
+        "text1": "Twateguye amahitamo meza y'aho uba kugira ngo ugume neza. Kanda hepfo kugira ngo urebe kandi ufate umwanya. Ariko niba ushaka gufata umwanya mbere, nyamuneka uzuza ifishi ya RSVP kandi tuzakwihagararira.",
+        "text2": "Kanda hano kugira ngo urebe Ifishi ya RSVP",
+        "comingSoon": "Bizaza vuba"
+    },
+    "registry": {
+        "title": "Urutonde rw'Ibintu by'Ubukwe",
+        "text": "Urukundo rwanyu, isengesho zanyu, kuba muri twese ku bukwe bwacu bisobanura cyane kuri twe... muri ukuri ni impano nziza cyane turashobora gusaba.",
+        "text1": "Niba ushaka kuduha umusanzu mu gihe dutangira uru rugendo rwiza hamwe, twaba twishimiye cyane.",
+        "text2": "Amakuru ya Banki:",
+        "text3": "Izina rya Banki:",
+        "text4": "Izina ry'umukoresha wa konti:",
+        "text5": "Nimero ya konti:",
+        "text6": "Ishami:",
+        "text7": "Nimero ya IBAN:",
+        "text8": "Kode ya Swift:",
+        "text9": "MTN Rwanda (MoMo)",
+        "text99": "Airtel Uganda",
+        "zelle": "Zelle",
+        "zelleEmail": "Imeri",
+        "zelleContact": "Izina",
+        "text10": "Twese urukundo n'ububasha,"
+    },
+    "rsvp": "Nyamuneka emeza ko uzahagera",
+    "Save The Date": "Bika Itariki",
+    "Our Story": "Inkuru Yacu",
+    "Ceremony": "Seremoni",
+    "Reception": "Ibirori",
+    "Travel & Accommodation": "Urugendo n'Aho Uba",
+    "Join Us": "Muduhere",
+    "We hope you can make it!": "Turizera ko muzashobora kuza!",
+    "RSVP": "Emeza ko uzahagera",
+    "14th February 2026": "Ku wa 14 Gashyantare 2026",
+    "See how it all started": "Reba uko byose byatanguye",
+    "Details": "Ibisobanuro",
+    "Gallery": "Amafoto",
+    "Registry": "Urutonde rw'ibintu",
+    "Itinerary": "Gahunda",
+    "Accommodation": "Aho Uba",
+    "Click on the link below:": "Kanda kuri link ikurikira:",
+
+    "How We Met": "Uko Twahuye",
+    "HowWeMet_Paragraph": "Dusanze urukundo mu hantu tutekerezaga... Ubushinwa. Mu gihe cy'icyorezo cya COVID-19, amahirwe yahuriranye Arnold na Haven mu gihe bari baba mu majyepfo y'Ubushinwa. Nubwo bazaga kubera impamvu zitandukanye, inzira zabo zahuriranye bitunguranye... binyuze ku munywanyi babasangiye. Icyo gihe, Haven yakoraga nk'umwigisha w'icyongereza i Shenzhen, mu gihe Arnold yigaga informatique i Guangzhou. Nubwo hari intera hagati y'imigi, bumvise umubano uhita kandi batangira kubaka ubucuti bwihuse burahinduka ikindi kintu cyimbitse. Nyuma y'amezi atanu bavuye bahuye, batangiye gukundana ku mugaragaro. Kuva mu ntangiriro, Arnold yari afite ibyiyumviro bikomeye kuri Haven, abwira inshuti ze ati, 'Ni umugore wo kubana.' Haven yakuwaga n'ibiganiro bya Arnold byubaka no mu buryo yari amushishikariza gutekereza no gukura.",
+
+    "Building Life Together": "Kubaka Ubuzima Hamwe",
+    "BuildingLifeTogether_Paragraph": "Mu 2002, umwaka umwe nyuma yo gutangira umubano wabo, Haven yumvise ahamagarirwa gusubira muri Leta Zunze Ubumwe. Yaretse akazi, yimukiye mu nzu ye, kandi yaguze amatike yose y'indege atatu. Ariko mu byabaye bidasubirwaho, ntashoboje kuzamuka muri rimwe muri ayo. Byaragaragaye ko Imana ifite gahunda zikurikiyeho. Adafite andi hantu aho ajya, yagarutse i Guangzhou—umurwa wa Arnold.\n\nArnold yamuhagarariwe igihe cyose, atanga inkunga mu gihe yarimo agatangaje ibice bya visa, impapuro, n'urugendo mu migi myinshi kugira ngo abone inyandiko. Amaherezo, Haven yasanze akandi kazi ko kwigisha i Guangzhou, bikamufungurira inzira zo kuba hafi kandi bakomeza umubano wabo.\n\nHamwe, bakoresheje neza igihe cyabo. Bazenguruye Ubushinwa, bagiiye kureba filime hamwe, bumvaga umuziki, bagerageza ibiryo bishya, kandi bagikundagurutsa inzira ndende mu murwa. Basekaga n'incuti, bareba imikino ya NBA, imikino ya Premier League kandi basporaga hamwe. Bajyaga mu rusengero, bubaka umuryango, kandi bakora umwirondoro wari nk'urugo.\n\nHanyuma muri Gashyantare 2023, ubuzima bwahindutse. Haven yimukiye muri Leta Zunze Ubumwe za Amerika—iki gihe yimukiye i Washington, D.C. mu gihe Arnold yasubiye mu Bugande nyuma y'imyaka umunani mu Bushinwa. Icyiciro cy'intera ndende cyatangiye. Nubwo bari intera n'uturere, bavuganye buri munsi, hirya no hino mu turere n'imigabane. Ku gihe kimwe, Haven ari i Seattle kandi Arnold akiri i Guangzhou, barabyemeje itandukaniro ry'amasaha 15 ariko ntibigeze bihagarara guhagararana.",
+
+    "The Proposal": "Gusaba Ubukwe",
+    "TheProposal_Paragraph": "Hanyuma haje ikintu cyiza cyane.\n\nMu iherezo rya 2023, Haven yari afite akazi mu Kenya, igihugu cyari gifite akamaro ku bwa Arnold. Yari amaze gufata icyemezo ko Kenya ari ho yazasaba Heaven kubana.\n\nKu wa 15 Ukuboza 2023, Arnold yasabye. Byari gutunguranye byibuze kuri Haven, wavuze yego anyereka amarira n'ibyishimo. Yari yarasengeye umugabo nka Arnold, kandi muri icyo gihe, yabonye izo sengesho zisubirwa.\n\nKuva icyo gihe, bakomeje kugenda hamwe, ukuboko ku kuboko, nubwo ubuzima bukomeza guhinduka. Heaven yatangiye igice gishya i Washington, D.C. kandi Arnold yatangiye gahunda yo kwiga kugira ngo akure mu kazi. Hamwe, bahangane n'inzibacyuho, intera, n'ibitazwi ariko ntibigeze bigira wenyine.\n\nBaha Imana icyubahiro cyose, kuko yaba urufatiro rw'umubano wabo. Ni ihangane ryayo, imbaraga, n'ubuntu byabakomeje mu myaka ibiri y'urukundo rw'intera kandi bikomeza kubayobora muri iki cyiciro gikurikiyeho, kuruhande.",
+
+    "Our Photos in China": "Amafoto yacu mu Bushinwa",
+    "Home": "Ahabanza",
+
+    "theme": {
+        "verse": "Nubwo umwe ashobora gutsindwa, babiri bashobora kwirwanaho. Umugozi w'imirongo itatu ntushobora kucibwa vuba.",
+        "reference": "Umubitsi 4:12",
+        "title": "Umugozi w'Imirongo Itatu",
+        "subtitle": "Bahujwe n'Urukundo, Bakomeye n'Imana"
+    },
+
+    "accommodation": {
+        "title": "Aho Uba ku Mushitsi w'Ubukwe Bwacu",
+        "subtitle": "Turishimiye cyane kwakira abakunzi bacu baturuka ku isi yose",
+        "welcome": "Turishimiye cyane kwakira abakunzi bacu baturutse muri Amerika, Uburayi, U Rwanda, no mu Bugande bwose kugira ngo twizihe ubukwe bwacu hamwe!",
+        "venue": {
+            "title": "Ubukwe bwacu buzabera"
+        },
+        "luxury": {
+            "title": "Amahoteri muri Kampala",
+            "subtitle": "Niba ushaka gutuza, ubwiza, n'umuntu wo mu rwego rwo hejuru, turasaba amahoteri akurikira:"
+        },
+        "hotels": {
+            "latitude": {
+                "description": "Hoteri nziza ya boutique ireba Ikiyaga Victoria, ihuza igishushanyo cya kijyambere hamwe n'ubuntu bw'Ubugande. Byiza ku bashyitsi bakunda ubuhanzi, gutuza, n'ibikoresho byiza."
+            },
+            "lePetit": {
+                "description": "Ubuntu bw'Abafaransa mu buryo butuje. Iyi hoteri ifite spa, piscine, n'ibiryo byiza - byiza ku bashyitsi bashaka gutura neza kandi neza."
+            },
+            "sheraton": {
+                "description": "Ikirango cya Marriott cy'isi yose gitanga ibyumba byiza, piscine yo hejuru, kandi hafi y'amaresitora meza yo hagati ya Kampala n'amaduka."
+            },
+            "protea": {
+                "description": "Iherereye ku musozi wa Naguru hamwe n'amashusho yiza y'umurwa, iyi hoteri izwi cyane ku bipimo byayo byo hejuru, igishushanyo cya kijyambere, kandi hafi y'ibintu byinshi by'umurwa."
+            },
+            "hotel360": {
+                "description": "Aho tuzakora ubukwe bwacu nabwo dutanga aho uba gutuza. Abashyitsi baba hano bazishimira aho bari aho ibirori bizabera, bakikijwe n'amashusho yiza y'Umusozi wa Ndejje.",
+                "discount": "🎁 Igitekerezo cyihariye: Twabonye igabanuka rya 8% kuri buri cyumba ku bashyitsi bose b'ubukwe buba muri Hoteri 360° mu cyumweru cy'ubukwe.",
+                "rooms": "Hoteri ifite ibyumba 30 byose, rero uko tuduhamagara vuba, uko tuza kukwifashako neza kugumana aho uba."
+            }
+        },
+        "specialOffer": "Aho Ubukwe Buzabera ✨",
+        "nearby": {
+            "title": "Aho Uba Hafi",
+            "frontPage": {
+                "type": "Ihendutse, hafi y'aho ubukwe buzabera"
+            },
+            "house": {
+                "type": "Inzu ya Airbnb ikwiye imiryango cyangwa amatsinda"
+            },
+            "guesthouses": {
+                "type": "Ibyumba bihendutse kandi biganirwa hafi hafi, hagati ya minuty 10-20 z'aho ubukwe buzabera"
+            }
+        },
+        "travelTip": {
+            "title": "Inama y'Urugendo",
+            "content": "Niba ugenda mu ndege, ahantu uzagera ni Ikibuga cy'indege mpuzamahanga cya Entebbe (EBB) — hafi ya minoti 45-60 kuva Kampala bitewe n'imodoka.",
+            "recommendation": "Turasaba kugumana aho uba vuba kandi ukadumenyesha aho uzaba kugira ngo dushobore guhuza amahitamo y'ingendo hafi y'itariki y'ubukwe."
+        },
+        "closing": {
+            "message": "Murakaza neza muri Kampala",
+            "excitement": "Ntidushobora gutegereza kwizihiza uyu munsi wihariye hamwe na mwe!"
+        }
+    },
+
+    "travelGuide": {
+        "title": "Ubuyobozi bw'Urugendo n'Abasura",
+        "subtitle": "Muduhere muri Kampala, Ubugande",
+        "date": "Ku wa 14 Gashyantare 2026 • Ibintu byose ukeneye kumenya kugira ngo ugire urugendo rutazibagirana",
+        "welcome": {
+            "title": "Turishimiye cyane kubakira!",
+            "pearlOfAfrica": "Impeta y'Afurika",
+            "description1": "Ubugande bwitwa",
+            "description2": "kubera impamvu nziza - abantu bari bakire cyane, ikirere cyiza, kandi ntidushobora gutegereza gusangira aka hantu kihariye na mwe.",
+            "description3": "Haba murimo guhaguruka mu mahanga cyangwa mugendera kuva mu gihugu kiri hafi, dufite ibintu byose mukeneye kugira ngo urugendo rwawe rube rworoheje kandi rushimishije."
+        },
+        "visa": {
+            "title": "Visa n'Ibisabwa kugira ngo Winjire",
+            "subtitle": "Kugera mu Bugande byoroshye kuruta uko ubitekereza! Hitamo icyerekezo gikugirira neza.",
+            "eastAfrican": {
+                "title": "Ku bashyitsi b'Iburasirazuba bw'Afurika",
+                "region": "(U Rwanda, Kenya, Tanzaniya, Uburundi)",
+                "req1": "Nta visa ikenewe!",
+                "req2": "Zana gusa pasiporo yawe cyangwa ikarita y'indangamuntu",
+                "req3": "Icyemezo cy'urukingo rw'umukama w'umuhondo kirasabwa",
+                "req4": "Urugendo rw'abisi: amasaha 8-10 kuva Kigali",
+                "badge": "Nta Visa!"
+            },
+            "ugandaTourist": {
+                "title": "Visa y'Umukerarugendo w'Ubugande",
+                "region": "Ku Bashyitsi Mpuzamahanga",
+                "req1": "Igiciro: $50 USD kugira ngo winjire rimwe",
+                "req2": "Ikoreshwa mu minsi 90",
+                "req3": "Usabe kuri interineti kuri visas.immigration.go.ug",
+                "req4": "Byiza niba usura Ubugande gusa"
+            },
+            "eastAfricanTourist": {
+                "title": "Visa y'Umukerarugendo w'Iburasirazuba bw'Afurika",
+                "region": "Irasabwa ku Bashakashatsi",
+                "req1": "Igiciro: $100 USD",
+                "req2": "Ikoreshwa mu minsi 90 kwinjira kenshi",
+                "req3": "Kwinjira mu Bugande, Kenya na Rwanda",
+                "req4": "Byiza kugira ngo uhurize safari, kureba ingagi n'ubukwe!",
+                "badge": "Byasabwe"
+            },
+            "applicationTips": {
+                "title": "Inama zo Gusaba Visa",
+                "tip1": "Pasiporo ikora amezi 6+ nyuma y'itariki y'urugendo",
+                "tip2": "Itike yo gusubira cyangwa kugenda imbere rirasabwa",
+                "tip3": "Amakuru y'aho uba (kanda kugira ngo urebe amahitamo)",
+                "tip4": "Usabe nibura ibyumweru 2 mbere y'urugendo"
+            },
+            "cta": {
+                "title": "Witeguye Gusaba Visa Yawe?",
+                "description": "Tangira gusaba visa yawe kuri interineti ubu. Uburyo bworoshye kandi burumvikana!",
+                "button": "Saba Visa y'Ubugande",
+                "portal": "visas.immigration.go.ug - Urubuga Rwa Leta rw'Ubujyanama bw'Ubugande"
+            }
+        },
+        "health": {
+            "title": "Ibisabwa mu buzima",
+            "yellowFever": "Icyemezo cy'urukingo rw'umukama w'umuhondo",
+            "malaria": "Imiti yo kwirinda umugera",
+            "insurance": "Ubwishingizi bw'urugendo",
+            "required": "Birasabwa",
+            "recommended": "Byasabwe",
+            "note": "Icyitonderwa:",
+            "noteText": "Baza muganga wawe ibyumweru 4-6 mbere y'urugendo kugira ngo uhabwe inama z'ubuzima bwite n'urukingo rukenewe."
+        },
+        "gettingTo": {
+            "title": "Kugera Kampala",
+            "flight": {
+                "title": "Kuguruka kuri Ikibuga cy'indege cya Entebbe",
+                "item1": "Ikibuga cy'indege mpuzamahanga cya Entebbe (EBB)",
+                "item2": "Kilometre 40 kuva Kampala (isaha imwe mu modoka)",
+                "item3": "Tagisi z'ikibuga cy'indege: $30-40 USD",
+                "item4": "Uber/Bolt nabyo zirahari",
+                "tip": "Inama:",
+                "tipText": "Imodoka zishobora kuba nyinshi mu masaha yo kuri akazi (7-10 mu gitondo, 5-8 nimugoroba)"
+            },
+            "bus": {
+                "title": "Abisi kuva U Rwanda/Kenya",
+                "item1": "Abashinzwe: Jaguar, Trinity, Modern Coast",
+                "item2": "Kuva Kigali: amasaha 8-10",
+                "item3": "Igiciro: Hafi ya $15-25 USD",
+                "item4": "Guhaguruka: Parike ya Bisi ya Nyabugogo",
+                "tip": "Inama:",
+                "tipText": "Fata amatike mbere mu gihe cy'ibihe byinshi"
+            }
+        },
+        "apps": {
+            "title": "Porogaramu z'Ingenzi zo Gukuramo",
+            "subtitle": "Zikuremo mbere yo kugera kugira ngo ukorere byoroshye!",
+            "safeBoda": {
+                "name": "SafeBoda",
+                "description": "Pikipiki - byihuta cyane mu modoka!"
+            },
+            "uber": {
+                "name": "Uber / SafeCar / Faras",
+                "description": "Imodoka ahantu hose"
+            },
+            "maps": {
+                "name": "Google Maps",
+                "description": "Kuzenguruka gukora neza"
+            },
+            "whatsapp": {
+                "name": "WhatsApp",
+                "description": "Abantu bose barakoresha hano"
+            },
+            "mobileMoney": {
+                "name": "MTN MoMo / Airtel Money",
+                "description": "Amafaranga ya terefoni (nka Venmo)"
+            }
+        },
+        "money": {
+            "title": "Ibibazo by'Amafaranga",
+            "currency": {
+                "title": "Ifaranga",
+                "name": "Shilling y'Ubugande (UGX)",
+                "rate": "Igipimo cy'ubu: ~3,600 UGX = $1 USD"
+            },
+            "payment": {
+                "title": "Uburyo bwo Kwishyura",
+                "cash": "Amafaranga ni nyir'ubwami mu Bugande",
+                "cards": "Amakarita yemerewe mu mahoteri manini",
+                "mobile": "Amafaranga ya terefoni aratangaje cyane"
+            },
+            "atm": {
+                "title": "ATM n'Ihana",
+                "forex": "Ibiciro byiza byo guhana amafaranga mu biro byo guhana amafaranga muri Kampala",
+                "forexNote": "(byiza kuruta ibiciro by'ikibuga cy'indege)",
+                "atmText": "ATM ziraboneka hose (Stanbic & Standard Chartered byasabwe)"
+            },
+            "tipping": {
+                "title": "Gutanga Impamvu",
+                "text": "10% mu maresitora niba igihombo cy'uburyo budakoreshejwe"
+            }
+        },
+        "packing": {
+            "title": "Icyo Uzana",
+            "items": {
+                "sunscreen": "Kuzirwa n'izuba SPF 30+",
+                "repellent": "Ikintu gikingira udukoko hamwe na DEET",
+                "jacket": "Ikoti ryoroheje ry'imvura cyangwa umutaka",
+                "adapter": "Adapter y'ubwoko bwa G (UK plug)",
+                "shoes": "Inkweto zo kugenda zoroshye",
+                "sweater": "Umwenda woroheje ku mugoroba"
+            },
+            "weather": {
+                "title": "Ikirere muri Gashyantare",
+                "daytime": {
+                    "label": "Ku manywa",
+                    "temp": "25-30°C (77-88°F)",
+                    "desc": "Gishyushye kandi cyiza"
+                },
+                "evening": {
+                    "label": "Nimugoroba",
+                    "temp": "17-18°C (63-65°F)",
+                    "desc": "Bikonje, zana umwenda"
+                },
+                "rain": {
+                    "label": "Imvura",
+                    "temp": "Rimwe na rimwe imvura",
+                    "desc": "Iherezo ry'igihe cy'impyisi"
+                }
+            }
+        },
+        "cultural": {
+            "title": "Inama z'Umuco",
+            "subtitle": "Gusobanukirwa imigenzo y'ahantu bizagufasha guhuza n'ubushyuhe bw'umuco w'Ubugande",
+            "tips": {
+                "greetings": "Kuramutsa birakomeye - fata igihe cyo kuramutsa abantu neza",
+                "time": "Igihe cy'Ubugande - ibirori bikunze gutangira mu minota 30-60 bitinze",
+                "bargaining": "Gupiganiriza biteganijwe ku masoko (tangira kuri 50%)",
+                "photos": "Buri gihe saba mbere yo gufotora abantu",
+                "language": "Wiga Oli otya? (Amakuru yawe?) mu Luganda",
+                "warmth": "Abanyougande bari bakire cyane kandi bakinira!"
+            }
+        },
+        "safety": {
+            "title": "Kuguma Ufite Umutekano kandi Ufite Ubuzima",
+            "tips": {
+                "safe": "Muri rusange birafite umutekano - Kampala irakira abasura",
+                "valuables": "Koresha amakofre y'amahoteri ku bintu byagaciro, wirinde imitako igaragara",
+                "transport": "Koresha Uber/Bolt aho kugenda nijoro",
+                "pharmacies": "Amaduka y'imiti yuzuye mu murwa wose",
+                "emergency": "Igihe cy'ibyihutirwa: Polisi 999, Ubuvuzi 911"
+            },
+            "foodWater": {
+                "title": "Umutekano w'Ibiryo n'Amazi",
+                "water": "Koresha amazi mu macupa (aboneka hose)",
+                "restaurants": "Amaresitora y'amahoteri afite umutekano; hitamo amastand y'ibiryo by'umuhanda arimo abantu benshi",
+                "rolex": "Gerageza Rolex (chapati hamwe n'amagi) - ibiryo by'umuhanda Ubugande bukunda!"
+            }
+        },
+        "personalNote": {
+            "title": "Ubutumwa Bwihariye Buturuka Kuri Twe",
+            "pearlQuote": "Ubugande bwitwa",
+            "pearlText": "Impeta y'Afurika",
+            "pearlReason": "kubera impamvu nziza",
+            "text1": "Abantu bari bakire cyane, ikirere cyiza, kandi ntidushobora gutegereza gusangira aka hantu kihariye na mwe.",
+            "text2": "Ntimuhanganye niba ibintu byose bisa nkibintu bishya - Abanyubugande bafasha kandi benshi bavuga icyongereza. Tuzatunganya no gukora ibikorwa mu matsinda ku bashyitsi bo mu mahanga kugira ngo dushakashe hamwe!",
+            "questions": "Ibibazo ku rugendo? Turi hano kugira ngo dufashe!",
+            "whatsapp": "WhatsApp",
+            "email": "Dukohereze Imeri",
+            "whatsappLabel": "WhatsApp:",
+            "emailLabel": "Imeri:",
+            "signature": "Turabonana muri Kampala!",
+            "closing": "Twese urukundo,",
+            "names": "Arnold & Haven"
+        },
+        "footer": {
+            "updated": "Iheruka kuvugururwa: Mutarama 2026"
+        }
+    }
+}

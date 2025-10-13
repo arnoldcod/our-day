@@ -50,6 +50,7 @@ const Navbar = () => {
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'rw', name: 'Kinyarwanda', flag: '🇷🇼' },
     { code: 'ti', name: 'ትግርኛ', flag: '🇪🇷' },
   ];
 
