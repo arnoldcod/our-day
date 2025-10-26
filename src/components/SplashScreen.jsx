@@ -36,7 +36,7 @@ const SplashScreen = () => {
                 delay: randomDelay,
               }}
             >
-              <HeartIcon className="w-4 h-4 text-white" />
+              <HeartIcon className="w-4 h-4 text-red-500" />
             </motion.div>
           );
         })}
@@ -56,21 +56,21 @@ const SplashScreen = () => {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <HeartIcon className="w-6 h-6 text-pink-300" />
+              <HeartIcon className="w-6 h-6 text-red-500" />
             </motion.div>
             <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             >
-              <HeartIcon className="w-6 h-6 text-pink-300" />
+              <HeartIcon className="w-6 h-6 text-red-500" />
             </motion.div>
             <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             >
-              <HeartIcon className="w-6 h-6 text-pink-300" />
+              <HeartIcon className="w-6 h-6 text-red-500" />
             </motion.div>
           </div>
         </motion.div>
@@ -109,7 +109,7 @@ const SplashScreen = () => {
                 }}
                 className="relative"
               >
-                <HeartIcon className="w-16 h-16 text-pink-200" />
+                <HeartIcon className="w-16 h-16 text-red-500" />
                 <div
                   className="absolute inset-0 flex items-center justify-center text-2xl font-light text-[#1a4731]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
@@ -167,7 +167,7 @@ const SplashScreen = () => {
               transition={{ duration: 1, repeat: Infinity }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <HeartIcon className="w-6 h-6 text-pink-300" />
+              <HeartIcon className="w-6 h-6 text-red-500" />
             </motion.div>
           </div>
         </motion.div>
