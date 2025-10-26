@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import HomePage from './components/HomePage';
-import OurStoryPage from './components/OurStoryPage';
-import RegistryPage from './components/RegistryPage';
-import RsvpPage from './components/RsvpPage';
-import AccommodationPage from './components/AccommodationPage';
-import TravelGuidePage from './components/TravelGuidePage';
 import SplashScreen from './components/SplashScreen';
-// import ItineraryPage from './components/ItineraryPage';
+
+// Lazy load route components for better code splitting
+const HomePage = lazy(() => import('./components/HomePage'));
+const OurStoryPage = lazy(() => import('./components/OurStoryPage'));
+const RegistryPage = lazy(() => import('./components/RegistryPage'));
+const RsvpPage = lazy(() => import('./components/RsvpPage'));
+const AccommodationPage = lazy(() => import('./components/AccommodationPage'));
+const TravelGuidePage = lazy(() => import('./components/TravelGuidePage'));
+// const ItineraryPage = lazy(() => import('./components/ItineraryPage'));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,15 +58,17 @@ function App() {
 
       {!isLoading && (
         <Router>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/our-story" element={<OurStoryPage />} />
-            <Route path="/registry" element={<RegistryPage />} />
-            <Route path="/rsvp" element={<RsvpPage />} />
-            <Route path="/accommodation" element={<AccommodationPage />} />
-            <Route path="/travel-guide" element={<TravelGuidePage />} />
-            {/* <Route path="/itinerary" element={<ItineraryPage />} /> */}
-          </Routes>
+          <Suspense fallback={<div className="min-h-screen bg-white" />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/our-story" element={<OurStoryPage />} />
+              <Route path="/registry" element={<RegistryPage />} />
+              <Route path="/rsvp" element={<RsvpPage />} />
+              <Route path="/accommodation" element={<AccommodationPage />} />
+              <Route path="/travel-guide" element={<TravelGuidePage />} />
+              {/* <Route path="/itinerary" element={<ItineraryPage />} /> */}
+            </Routes>
+          </Suspense>
         </Router>
       )}
     </>
