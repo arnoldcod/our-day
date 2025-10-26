@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,9 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-gradient-to-b from-black/50 to-transparent'
+          isScrolled || isMobileMenuOpen
+            ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
+            : 'bg-gradient-to-b from-black/50 to-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,7 +75,9 @@ const Navbar = () => {
               href="/"
               whileHover={{ scale: 1.05 }}
               className={`font-serif text-2xl font-bold ${
-                isScrolled || isMobileMenuOpen ? 'text-primary' : 'text-white'
+                isScrolled || isMobileMenuOpen
+                  ? 'text-primary dark:text-primary-dark'
+                  : 'text-white'
               }`}
             >
               A & H
@@ -84,8 +89,10 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => handleNavClick(link.path, link.hash)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isScrolled || isMobileMenuOpen ? 'text-gray-700' : 'text-white/90'
+                  className={`text-sm font-medium transition-colors hover:text-primary dark:hover:text-primary-dark ${
+                    isScrolled || isMobileMenuOpen
+                      ? 'text-gray-700 dark:text-gray-200'
+                      : 'text-white/90'
                   }`}
                 >
                   {link.name}
@@ -98,7 +105,7 @@ const Navbar = () => {
                   onClick={() => setShowLangMenu(!showLangMenu)}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
                     isScrolled || isMobileMenuOpen
-                      ? 'text-gray-700 hover:bg-gray-100'
+                      ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
                       : 'text-white/90 hover:bg-white/10'
                   }`}
                 >
@@ -112,7 +119,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50"
+                      className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2 z-50"
                     >
                       {languages.map((lang) => (
                         <button
@@ -121,8 +128,10 @@ const Navbar = () => {
                             i18n.changeLanguage(lang.code);
                             setShowLangMenu(false);
                           }}
-                          className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors flex items-center space-x-2 ${
-                            i18n.language === lang.code ? 'bg-primary/10 text-primary' : 'text-gray-700'
+                          className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2 ${
+                            i18n.language === lang.code
+                              ? 'bg-primary/10 dark:bg-primary-dark/20 text-primary dark:text-primary-dark'
+                              : 'text-gray-700 dark:text-gray-200'
                           }`}
                         >
                           <span>{lang.flag}</span>
@@ -134,6 +143,9 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
+              {/* Dark Mode Toggle */}
+              <DarkModeToggle />
+
               {/* RSVP Button */}
               <motion.a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
@@ -141,7 +153,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-lg"
+                className="bg-primary dark:bg-primary-dark text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors shadow-lg"
               >
                 {t("rsvp")}
               </motion.a>
@@ -151,7 +163,9 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`md:hidden transition-colors ${
-                isScrolled || isMobileMenuOpen ? 'text-primary' : 'text-white'
+                isScrolled || isMobileMenuOpen
+                  ? 'text-primary dark:text-primary-dark'
+                  : 'text-white'
               }`}
             >
               {isMobileMenuOpen ? (
@@ -176,7 +190,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween' }}
-            className="fixed inset-0 z-40 bg-white md:hidden"
+            className="fixed inset-0 z-40 bg-white dark:bg-gray-900 md:hidden"
           >
             <div className="flex flex-col h-full pt-24 px-8">
               <div className="flex flex-col space-y-6">
@@ -184,15 +198,18 @@ const Navbar = () => {
                   <button
                     key={link.name}
                     onClick={() => handleNavClick(link.path, link.hash)}
-                    className="text-primary text-xl font-medium text-left hover:text-primary/70 transition-colors"
+                    className="text-primary dark:text-primary-dark text-xl font-medium text-left hover:text-primary/70 dark:hover:text-primary-dark/70 transition-colors"
                   >
                     {link.name}
                   </button>
                 ))}
               </div>
 
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <p className="text-sm text-gray-500 mb-3">Select Language</p>
+              <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between mb-4">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Select Language</p>
+                  <DarkModeToggle />
+                </div>
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -201,7 +218,9 @@ const Navbar = () => {
                       setIsMobileMenuOpen(false);
                     }}
                     className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors flex items-center space-x-3 ${
-                      i18n.language === lang.code ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'
+                      i18n.language === lang.code
+                        ? 'bg-primary dark:bg-primary-dark text-white'
+                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
                     }`}
                   >
                     <span className="text-2xl">{lang.flag}</span>
@@ -215,7 +234,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.95 }}
-                className="mt-8 bg-primary text-white px-6 py-3 rounded-full text-center font-medium shadow-lg"
+                className="mt-8 bg-primary dark:bg-primary-dark text-white px-6 py-3 rounded-full text-center font-medium shadow-lg"
               >
                 {t("rsvp")}
               </motion.a>

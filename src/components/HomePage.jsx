@@ -34,7 +34,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
 
       {/* Hero Section */}
@@ -92,11 +92,11 @@ const HomePage = () => {
       </motion.section>
 
       {/* Theme Verse Section */}
-      <section className="relative py-16 sm:py-20 px-4 sm:px-8 overflow-hidden bg-white">
+      <section className="relative py-16 sm:py-20 px-4 sm:px-8 overflow-hidden bg-white dark:bg-gray-900">
         {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-48 h-48 bg-primary rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-5 dark:opacity-10">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-primary dark:bg-primary-dark rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary dark:bg-primary-dark rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
@@ -106,7 +106,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100"
+            className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800"
           >
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
@@ -116,7 +116,7 @@ const HomePage = () => {
                 className="w-full h-full object-cover"
               />
               {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+              <div className="absolute inset-0 bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm"></div>
             </div>
 
             {/* Content */}
@@ -129,10 +129,10 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="text-center mb-6"
               >
-                <p className="text-lg sm:text-xl md:text-2xl font-serif text-gray-800 leading-relaxed mb-4 italic">
+                <p className="text-lg sm:text-xl md:text-2xl font-serif text-gray-800 dark:text-gray-100 leading-relaxed mb-4 italic">
                   &ldquo;{t('theme.verse')}&rdquo;
                 </p>
-                <cite className="text-base sm:text-lg md:text-xl text-gray-600 not-italic font-light">
+                <cite className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 not-italic font-light">
                   — {t('theme.reference')}
                 </cite>
               </motion.blockquote>
@@ -145,13 +145,13 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="flex items-center justify-center my-6"
               >
-                <div className="h-px bg-gray-300 flex-1 max-w-xs"></div>
+                <div className="h-px bg-gray-300 dark:bg-gray-600 flex-1 max-w-xs"></div>
                 <div className="mx-4">
-                  <svg className="w-5 h-5 text-primary/60" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-primary/60 dark:text-primary-dark/60" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
                   </svg>
                 </div>
-                <div className="h-px bg-gray-300 flex-1 max-w-xs"></div>
+                <div className="h-px bg-gray-300 dark:bg-gray-600 flex-1 max-w-xs"></div>
               </motion.div>
 
               {/* Theme Statement */}
@@ -162,10 +162,10 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <p className="text-xl sm:text-2xl md:text-3xl font-serif text-primary mb-2">
+                <p className="text-xl sm:text-2xl md:text-3xl font-serif text-primary dark:text-primary-dark mb-2">
                   {t('theme.title')}
                 </p>
-                <p className="text-base sm:text-lg md:text-xl text-gray-700 font-light tracking-wide">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 font-light tracking-wide">
                   {t('theme.subtitle')}
                 </p>
               </motion.div>
@@ -183,21 +183,21 @@ const HomePage = () => {
                   whileInView={{ height: 60 }}
                   transition={{ duration: 0.8, delay: 1.2 }}
                   viewport={{ once: true }}
-                  className="w-1 bg-primary/60 rounded-full"
+                  className="w-1 bg-primary/60 dark:bg-primary-dark/60 rounded-full"
                 ></motion.div>
                 <motion.div
                   initial={{ height: 0 }}
                   whileInView={{ height: 80 }}
                   transition={{ duration: 0.8, delay: 1.3 }}
                   viewport={{ once: true }}
-                  className="w-1.5 bg-primary rounded-full"
+                  className="w-1.5 bg-primary dark:bg-primary-dark rounded-full"
                 ></motion.div>
                 <motion.div
                   initial={{ height: 0 }}
                   whileInView={{ height: 60 }}
                   transition={{ duration: 0.8, delay: 1.4 }}
                   viewport={{ once: true }}
-                  className="w-1 bg-primary/60 rounded-full"
+                  className="w-1 bg-primary/60 dark:bg-primary-dark/60 rounded-full"
                 ></motion.div>
               </motion.div>
             </div>
@@ -215,7 +215,7 @@ const HomePage = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary rounded-full blur-sm"
+          className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary dark:bg-primary-dark rounded-full blur-sm"
         ></motion.div>
         <motion.div
           animate={{
@@ -228,7 +228,7 @@ const HomePage = () => {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute top-1/3 right-1/3 w-2 h-2 bg-primary rounded-full blur-sm"
+          className="absolute top-1/3 right-1/3 w-2 h-2 bg-primary dark:bg-primary-dark rounded-full blur-sm"
         ></motion.div>
         <motion.div
           animate={{
@@ -241,12 +241,12 @@ const HomePage = () => {
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary rounded-full blur-sm"
+          className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-primary dark:bg-primary-dark rounded-full blur-sm"
         ></motion.div>
       </section>
 
       {/* Our Story Section */}
-      <section className="py-24 sm:py-32 px-4 sm:px-8 bg-gray-50">
+      <section className="py-24 sm:py-32 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -254,13 +254,13 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 text-primary">{t("See how it all started")}</h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 text-primary dark:text-primary-dark">{t("See how it all started")}</h2>
+            <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto mb-8"></div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/our-story'}
-              className="bg-primary text-white px-10 py-4 text-lg font-medium hover:bg-primary/90 transition-colors rounded-full shadow-lg"
+              className="bg-primary dark:bg-primary-dark text-white px-10 py-4 text-lg font-medium hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors rounded-full shadow-lg"
             >
               {t("ourStoryButton")}
             </motion.button>
@@ -288,19 +288,19 @@ const HomePage = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center justify-center p-8 sm:p-12 bg-white"
+          className="flex items-center justify-center p-8 sm:p-12 bg-white dark:bg-gray-900"
         >
           <div className="max-w-md">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-8 text-primary">{t('ceremony.title')}</h2>
-            <div className="space-y-4 text-secondary">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-8 text-primary dark:text-primary-dark">{t('ceremony.title')}</h2>
+            <div className="space-y-4 text-secondary dark:text-gray-300">
               <div className="flex items-start space-x-3">
-                <MapPinIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <MapPinIcon className="h-6 w-6 text-primary dark:text-primary-dark mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-500">{t('ceremony.link')}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{t('ceremony.link')}</p>
                   <a href="https://phaneroo.org/ministry-profile/" target="_blank" rel="noopener noreferrer">
-                    <p className="font-bold text-xl text-primary hover:text-primary/70 transition-colors">{t('ceremony.place')}</p>
+                    <p className="font-bold text-xl text-primary dark:text-primary-dark hover:text-primary/70 dark:hover:text-primary-dark/70 transition-colors">{t('ceremony.place')}</p>
                   </a>
-                  <p className="mt-2 text-gray-600">{t('ceremony.location')}</p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">{t('ceremony.location')}</p>
                 </div>
               </div>
             </div>
@@ -309,7 +309,7 @@ const HomePage = () => {
       </section>
 
       {/* Event Details - Reception */}
-      <section className="min-h-screen grid md:grid-cols-2 bg-gray-50">
+      <section className="min-h-screen grid md:grid-cols-2 bg-gray-50 dark:bg-gray-800">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -328,19 +328,19 @@ const HomePage = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center justify-center p-8 sm:p-12 bg-gray-50 md:order-1"
+          className="flex items-center justify-center p-8 sm:p-12 bg-gray-50 dark:bg-gray-800 md:order-1"
         >
           <div className="max-w-md">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-8 text-primary">{t('reception.title')}</h2>
-            <div className="space-y-4 text-secondary">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-8 text-primary dark:text-primary-dark">{t('reception.title')}</h2>
+            <div className="space-y-4 text-secondary dark:text-gray-300">
               <div className="flex items-start space-x-3">
-                <MapPinIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <MapPinIcon className="h-6 w-6 text-primary dark:text-primary-dark mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-500">{t('reception.link')}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{t('reception.link')}</p>
                   <a href="https://hotel360.co.ug/" target="_blank" rel="noopener noreferrer">
-                    <p className="font-bold text-xl text-primary hover:text-primary/70 transition-colors">{t('reception.place')}</p>
+                    <p className="font-bold text-xl text-primary dark:text-primary-dark hover:text-primary/70 dark:hover:text-primary-dark/70 transition-colors">{t('reception.place')}</p>
                   </a>
-                  <p className="mt-2 text-gray-600">{t('reception.location')}</p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">{t('reception.location')}</p>
                 </div>
               </div>
             </div>
@@ -392,7 +392,7 @@ const HomePage = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ delay: 0.6 }}
-            className="inline-block bg-white text-primary px-12 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors rounded-full shadow-xl"
+            className="inline-block bg-white dark:bg-gray-100 text-primary dark:text-primary-dark px-12 py-4 text-lg font-semibold hover:bg-gray-100 dark:hover:bg-white transition-colors rounded-full shadow-xl"
           >
             {t('rsvp')}
           </motion.a>
@@ -403,7 +403,7 @@ const HomePage = () => {
       <GallerySection />
 
       {/* Travel Section */}
-      <section id="travel" className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50">
+      <section id="travel" className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -411,8 +411,8 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-primary">{t('travel.title')}</h2>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-primary dark:text-primary-dark">{t('travel.title')}</h2>
+            <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -421,21 +421,21 @@ const HomePage = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl p-8 shadow-lg"
+              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg"
             >
-              <div className="space-y-6 text-secondary">
+              <div className="space-y-6 text-secondary dark:text-gray-300">
                 <div className="flex items-start space-x-3">
-                  <MapPinIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <MapPinIcon className="h-6 w-6 text-primary dark:text-primary-dark mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-lg font-semibold mb-3 text-primary">{t('travel.airports')}</p>
+                    <p className="text-lg font-semibold mb-3 text-primary dark:text-primary-dark">{t('travel.airports')}</p>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
-                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                        <span className="w-2 h-2 bg-primary dark:bg-primary-dark rounded-full"></span>
                         <a
                           href="https://www.google.com/maps/place/Entebbe+International+Airport/@0.0418629,32.4435261,17z"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors cursor-pointer underline"
+                          className="hover:text-primary dark:hover:text-primary-dark transition-colors cursor-pointer underline"
                         >
                           Entebbe International Airport
                         </a>
@@ -451,13 +451,13 @@ const HomePage = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-green-800 to-green-950 rounded-2xl p-8 shadow-lg text-white"
+              className="bg-gradient-to-br from-green-800 to-green-950 dark:from-green-900 dark:to-green-950 rounded-2xl p-8 shadow-lg text-white"
             >
               <h3 className="text-2xl sm:text-3xl font-serif mb-6">{t('travel.whereToStay')}</h3>
-              <p className="mb-6 text-white/90 leading-relaxed">
+              <p className="mb-6 text-white/90 dark:text-white/95 leading-relaxed">
                 {t('travel.text1')}
               </p>
-              <p className="mb-6 text-white/90">
+              <p className="mb-6 text-white/90 dark:text-white/95">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header" className="underline hover:text-white transition-colors">
                   {t('travel.text2')}
                 </a>
@@ -466,7 +466,7 @@ const HomePage = () => {
                 onClick={() => window.location.href = '/accommodation'}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block bg-white text-primary font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-xl"
+                className="inline-block bg-white dark:bg-gray-100 text-primary dark:text-primary-dark font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-xl"
               >
                  {t('travel.whereToStay')}
               </motion.button>
@@ -476,7 +476,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-primary text-white">
+      <footer className="py-12 bg-primary dark:bg-primary-dark text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 text-center">
           <p className="text-sm opacity-90">
             &copy; {new Date().getFullYear()} Arnold & Haven. All rights reserved.

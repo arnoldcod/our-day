@@ -26,7 +26,7 @@ const OurStoryPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
 
       {/* Hero Section */}
@@ -36,7 +36,7 @@ const OurStoryPage = () => {
           alt="Couple together"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 dark:from-black/70 dark:via-black/60 dark:to-black/80 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -182,16 +182,16 @@ const OurStoryPage = () => {
               </motion.div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white dark:text-gray-100 mb-4">
               {t("ourStoryButton")}
             </h1>
-            <div className="w-24 h-1 bg-white mx-auto"></div>
+            <div className="w-24 h-1 bg-white dark:bg-gray-200 mx-auto"></div>
           </motion.div>
         </div>
       </section>
 
       {/* Story Content */}
-      <section className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50">
+      <section className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-5xl mx-auto">
           {storyContent.map((section, index) => (
             <motion.div
@@ -202,9 +202,9 @@ const OurStoryPage = () => {
               viewport={{ once: true }}
               className={`mb-20 ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}
             >
-              <div className="bg-white rounded-3xl shadow-xl p-8 sm:p-12 relative overflow-hidden">
+              <div className="bg-white dark:bg-gray-700 rounded-3xl shadow-xl dark:shadow-2xl p-8 sm:p-12 relative overflow-hidden">
                 {/* Decorative Icon */}
-                <div className="absolute top-8 right-8 text-6xl opacity-10">
+                <div className="absolute top-8 right-8 text-6xl opacity-10 dark:opacity-5">
                   {section.icon}
                 </div>
 
@@ -212,12 +212,12 @@ const OurStoryPage = () => {
                 <div className="relative z-10">
                   <div className="flex items-center space-x-4 mb-6">
                     <span className="text-4xl">{section.icon}</span>
-                    <h2 className="text-3xl sm:text-4xl font-serif text-primary">
+                    <h2 className="text-3xl sm:text-4xl font-serif text-primary dark:text-primary-dark">
                       {section.title}
                     </h2>
                   </div>
-                  <div className="w-20 h-1 bg-primary mb-6"></div>
-                  <p className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
+                  <div className="w-20 h-1 bg-primary dark:bg-primary-dark mb-6"></div>
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-lg whitespace-pre-line">
                     {section.content}
                   </p>
                 </div>
@@ -228,15 +228,15 @@ const OurStoryPage = () => {
       </section>
 
       {/* Divider Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary/80 dark:from-primary-dark dark:to-primary-dark/80">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <HeartIcon className="h-12 w-12 text-white mx-auto mb-4" />
-            <p className="text-2xl sm:text-3xl font-serif text-white italic">
+            <HeartIcon className="h-12 w-12 text-white dark:text-gray-100 mx-auto mb-4" />
+            <p className="text-2xl sm:text-3xl font-serif text-white dark:text-gray-100 italic">
               &quot;We give all glory to God, who has been the foundation of our relationship&quot;
             </p>
           </motion.div>
@@ -244,14 +244,14 @@ const OurStoryPage = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="bg-gray-50">
+      <section className="bg-gray-50 dark:bg-gray-800">
         <GallerySectionChina />
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-primary text-white">
+      <footer className="py-12 bg-primary dark:bg-primary-dark text-white dark:text-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 text-center">
-          <p className="text-sm opacity-90">
+          <p className="text-sm opacity-90 dark:opacity-80">
             &copy; {new Date().getFullYear()} Arnold & Haven. All rights reserved.
           </p>
         </div>

@@ -36,7 +36,7 @@ const RegistryPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-primary">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-primary dark:text-primary-dark">
       <Navbar />
 
       {/* Hero Section */}
@@ -63,7 +63,7 @@ const RegistryPage = () => {
       </section>
 
       {/* Registry Section */}
-      <section className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50">
+      <section className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-5xl mx-auto">
           {/* Introduction */}
           <motion.div
@@ -72,11 +72,11 @@ const RegistryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <GiftIcon className="h-12 w-12 text-primary mx-auto mb-6" />
-            <p className="text-xl sm:text-2xl text-gray-700 mb-6 leading-relaxed">
+            <GiftIcon className="h-12 w-12 text-primary dark:text-primary-dark mx-auto mb-6" />
+            <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-200 mb-6 leading-relaxed">
               {t('registry.text')}
             </p>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               {t('registry.text1')}
             </p>
           </motion.div>
@@ -86,11 +86,11 @@ const RegistryPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 mb-12"
+            className="bg-white dark:bg-gray-700 rounded-3xl shadow-2xl dark:shadow-gray-900/50 p-8 sm:p-12 mb-12"
           >
             <div className="flex items-center space-x-3 mb-8">
-              <BanknotesIcon className="h-8 w-8 text-primary" />
-              <h3 className="text-2xl sm:text-3xl text-primary font-serif">
+              <BanknotesIcon className="h-8 w-8 text-primary dark:text-primary-dark" />
+              <h3 className="text-2xl sm:text-3xl text-primary dark:text-primary-dark font-serif">
                 {t('registry.text2')}
               </h3>
             </div>
@@ -102,10 +102,10 @@ const RegistryPage = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="border-l-4 border-primary pl-4 py-2"
+                  className="border-l-4 border-primary dark:border-primary-dark pl-4 py-2"
                 >
-                  <p className="text-sm text-gray-500 mb-1">{detail.label}</p>
-                  <p className="text-lg font-semibold text-gray-800">{detail.value}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{detail.label}</p>
+                  <p className="text-lg font-semibold text-gray-800 dark:text-gray-100">{detail.value}</p>
                 </motion.div>
               ))}
             </div>
@@ -227,7 +227,7 @@ const RegistryPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl sm:text-2xl md:text-3xl font-serif italic mb-8 text-primary"
+              className="text-xl sm:text-2xl md:text-3xl font-serif italic mb-8 text-primary dark:text-primary-dark"
             >
               {t('registry.text10')}
             </motion.p>
@@ -246,14 +246,14 @@ const RegistryPage = () => {
                   ]
                 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="text-xl sm:text-2xl md:text-3xl font-serif font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent"
+                className="text-xl sm:text-2xl md:text-3xl font-serif font-bold bg-gradient-to-r from-primary via-primary/80 to-primary dark:from-primary-dark dark:via-primary-dark/80 dark:to-primary-dark bg-clip-text text-transparent"
               >
                 Arnold & Haven
               </motion.p>
               <motion.div
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
+                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent dark:via-primary-dark"
               />
             </motion.div>
           </div>
@@ -261,7 +261,7 @@ const RegistryPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-primary text-white">
+      <footer className="py-12 bg-primary dark:bg-primary-dark text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 text-center">
           <p className="text-sm opacity-90">
             &copy; {new Date().getFullYear()} Arnold & Haven. All rights reserved.

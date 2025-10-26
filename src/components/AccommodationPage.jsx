@@ -83,7 +83,7 @@ const AccommodationPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
 
       {/* Hero Section */}
@@ -116,7 +116,7 @@ const AccommodationPage = () => {
       </section>
 
       {/* Welcome Message */}
-      <section className="py-16 px-4 sm:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-8 bg-white dark:bg-gray-900">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,23 +124,23 @@ const AccommodationPage = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
-          <GlobeAltIcon className="h-12 w-12 text-primary mx-auto mb-6" />
-          <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-8">
+          <GlobeAltIcon className="h-12 w-12 text-primary dark:text-primary-dark mx-auto mb-6" />
+          <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-200 leading-relaxed mb-8">
             {t("accommodation.welcome")}
           </p>
-          <div className="bg-primary/5 rounded-2xl p-6 sm:p-8 border-l-4 border-primary">
-            <MapPinIcon className="h-10 w-10 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-serif text-primary mb-2">
+          <div className="bg-primary/5 dark:bg-primary-dark/10 rounded-2xl p-6 sm:p-8 border-l-4 border-primary dark:border-primary-dark">
+            <MapPinIcon className="h-10 w-10 text-primary dark:text-primary-dark mx-auto mb-4" />
+            <h3 className="text-2xl font-serif text-primary dark:text-primary-dark mb-2">
               {t("accommodation.venue.title")}
             </h3>
-            <p className="text-gray-700 text-lg font-medium">
+            <p className="text-gray-700 dark:text-gray-200 text-lg font-medium">
               Hotel 360°
             </p>
             <a
               href="https://maps.google.com/?q=Hotel+360+Ndejje+Road+Kampala+Uganda"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors inline-flex items-center space-x-1"
+              className="text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80 transition-colors inline-flex items-center space-x-1"
             >
               <MapPinIcon className="h-4 w-4" />
               <span>Ndejje Road, Kampala, Central Region, Uganda</span>
@@ -150,7 +150,7 @@ const AccommodationPage = () => {
       </section>
 
       {/* Luxury Hotels Section */}
-      <section className="py-20 px-4 sm:px-8 bg-gray-50">
+      <section className="py-20 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -159,12 +159,12 @@ const AccommodationPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <SparklesIcon className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-serif text-primary mb-4">
+            <SparklesIcon className="h-12 w-12 text-primary dark:text-primary-dark mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-serif text-primary dark:text-primary-dark mb-4">
               {t("accommodation.luxury.title")}
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-primary dark:bg-primary-dark mx-auto mb-6"></div>
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               {t("accommodation.luxury.subtitle")}
             </p>
           </motion.div>
@@ -177,23 +177,23 @@ const AccommodationPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${
-                  hotel.special ? 'border-2 border-primary' : ''
+                className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl dark:shadow-gray-900/50 dark:hover:shadow-gray-900/70 transition-shadow duration-300 overflow-hidden ${
+                  hotel.special ? 'border-2 border-primary dark:border-primary-dark' : ''
                 }`}
               >
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center space-x-4 mb-2">
-                        <div className="p-3 rounded-xl bg-primary/10">
-                          <hotel.IconComponent className="h-8 w-8 text-primary" />
+                        <div className="p-3 rounded-xl bg-primary/10 dark:bg-primary-dark/20">
+                          <hotel.IconComponent className="h-8 w-8 text-primary dark:text-primary-dark" />
                         </div>
-                        <h3 className="text-2xl font-serif text-primary">
+                        <h3 className="text-2xl font-serif text-primary dark:text-primary-dark">
                           {hotel.name}
                         </h3>
                       </div>
                       {hotel.special && (
-                        <span className="inline-block bg-primary text-white text-xs px-3 py-1 rounded-full mb-3">
+                        <span className="inline-block bg-primary dark:bg-primary-dark text-white text-xs px-3 py-1 rounded-full mb-3">
                           {t("accommodation.specialOffer")}
                         </span>
                       )}
@@ -204,22 +204,22 @@ const AccommodationPage = () => {
                     href={hotel.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-primary hover:text-primary/80 transition-colors mb-4 w-fit"
+                    className="flex items-center text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80 transition-colors mb-4 w-fit"
                   >
                     <MapPinIcon className="h-5 w-5 mr-2" />
                     <p className="text-sm underline">{hotel.location}</p>
                   </a>
 
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
                     {hotel.description}
                   </p>
 
                   {hotel.special && (
-                    <div className="bg-primary/5 rounded-xl p-4 border-l-4 border-primary">
-                      <p className="text-sm text-gray-700 font-medium mb-2">
+                    <div className="bg-primary/5 dark:bg-primary-dark/10 rounded-xl p-4 border-l-4 border-primary dark:border-primary-dark">
+                      <p className="text-sm text-gray-700 dark:text-gray-200 font-medium mb-2">
                         {t("accommodation.hotels.hotel360.discount")}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         {t("accommodation.hotels.hotel360.rooms")}
                       </p>
                     </div>
@@ -232,7 +232,7 @@ const AccommodationPage = () => {
       </section>
 
       {/* Airbnb Section */}
-      <section className="py-20 px-4 sm:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -241,11 +241,11 @@ const AccommodationPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <HomeModernIcon className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-serif text-primary mb-4">
+            <HomeModernIcon className="h-12 w-12 text-primary dark:text-primary-dark mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-serif text-primary dark:text-primary-dark mb-4">
               House Or Rental
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto"></div>
+            <div className="w-20 h-1 bg-primary dark:bg-primary-dark mx-auto"></div>
           </motion.div>
 
           <motion.div
@@ -253,23 +253,23 @@ const AccommodationPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl dark:shadow-gray-900/50 dark:hover:shadow-gray-900/70 transition-shadow duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
           >
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10">
-                      <HomeModernIcon className="h-8 w-8 text-primary" />
+                    <div className="p-3 rounded-xl bg-primary/10 dark:bg-primary-dark/20">
+                      <HomeModernIcon className="h-8 w-8 text-primary dark:text-primary-dark" />
                     </div>
-                    <h3 className="text-2xl font-serif text-primary">
+                    <h3 className="text-2xl font-serif text-primary dark:text-primary-dark">
                       AIRBNB
                     </h3>
                   </div>
                 </div>
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-6">
                 Airbnb provides excellent options for house rentals. Kololo, Ntinda, Muyenga and Munyonyo all provide excellent locations for rental.
               </p>
 
@@ -279,7 +279,7 @@ const AccommodationPage = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center space-x-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center space-x-2 bg-primary dark:bg-primary-dark text-white px-6 py-3 rounded-lg hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors"
               >
                 <span>Browse Airbnb in Kampala</span>
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -338,7 +338,7 @@ const AccommodationPage = () => {
       </section> */}
 
       {/* Travel Tip Section */}
-      <section className="py-16 px-4 sm:px-8 bg-gradient-to-br from-primary/5 to-primary/10">
+      <section className="py-16 px-4 sm:px-8 bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary-dark/10 dark:to-primary-dark/5">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -346,20 +346,20 @@ const AccommodationPage = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-gray-900/50 p-8 sm:p-12">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="p-3 rounded-xl bg-primary/10">
-                <PaperAirplaneIcon className="h-8 w-8 text-primary" />
+              <div className="p-3 rounded-xl bg-primary/10 dark:bg-primary-dark/20">
+                <PaperAirplaneIcon className="h-8 w-8 text-primary dark:text-primary-dark" />
               </div>
-              <h2 className="text-3xl font-serif text-primary">
+              <h2 className="text-3xl font-serif text-primary dark:text-primary-dark">
                 {t("accommodation.travelTip.title")}
               </h2>
             </div>
-            <div className="w-20 h-1 bg-primary mb-6"></div>
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            <div className="w-20 h-1 bg-primary dark:bg-primary-dark mb-6"></div>
+            <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed mb-6">
               {t("accommodation.travelTip.content")}
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
               {t("accommodation.travelTip.recommendation")}
             </p>
           </div>
@@ -367,10 +367,10 @@ const AccommodationPage = () => {
       </section>
 
       {/* Closing Message */}
-      <section className="py-20 px-4 sm:px-8 bg-gradient-to-br from-primary/5 via-white to-primary/10 relative overflow-hidden">
+      <section className="py-20 px-4 sm:px-8 bg-gradient-to-br from-primary/5 via-white to-primary/10 dark:from-primary-dark/10 dark:via-gray-900 dark:to-primary-dark/5 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 dark:bg-primary-dark/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 dark:bg-primary-dark/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
         <div className="max-w-5xl mx-auto relative z-10">
           <motion.div
@@ -393,17 +393,17 @@ const AccommodationPage = () => {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl"></div>
-                <div className="relative bg-white rounded-full p-5 shadow-2xl">
-                  <HeartIcon className="h-12 w-12 text-primary" />
+                <div className="absolute inset-0 bg-primary/20 dark:bg-primary-dark/20 rounded-full blur-xl"></div>
+                <div className="relative bg-white dark:bg-gray-800 rounded-full p-5 shadow-2xl dark:shadow-gray-900/50">
+                  <HeartIcon className="h-12 w-12 text-primary dark:text-primary-dark" />
                 </div>
               </motion.div>
             </motion.div>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-primary mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-primary dark:text-primary-dark mb-6">
               {t("accommodation.closing.message")}
             </h2>
-            <div className="w-32 h-1 bg-primary mx-auto mb-12"></div>
+            <div className="w-32 h-1 bg-primary dark:bg-primary-dark mx-auto mb-12"></div>
 
             {/* Main content card */}
             <motion.div
@@ -411,27 +411,27 @@ const AccommodationPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 mb-12 border border-gray-100"
+              className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl dark:shadow-gray-900/50 p-8 sm:p-12 mb-12 border border-gray-100 dark:border-gray-700"
             >
               {/* Quote-style design */}
               <div className="relative">
-                <svg className="absolute top-0 left-0 w-12 h-12 text-primary/20 -translate-x-2 -translate-y-2" fill="currentColor" viewBox="0 0 32 32">
+                <svg className="absolute top-0 left-0 w-12 h-12 text-primary/20 dark:text-primary-dark/20 -translate-x-2 -translate-y-2" fill="currentColor" viewBox="0 0 32 32">
                   <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z"/>
                 </svg>
 
                 <div className="pt-6">
-                  <p className="text-2xl sm:text-3xl text-gray-800 leading-relaxed mb-8 font-light">
+                  <p className="text-2xl sm:text-3xl text-gray-800 dark:text-gray-200 leading-relaxed mb-8 font-light">
                     {t("accommodation.closing.excitement")}
                   </p>
 
-                  <div className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+                  <div className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
                     <p>
                       We&apos;ve carefully selected these accommodations to ensure your comfort and convenience during our special celebration.
                     </p>
                   </div>
                 </div>
 
-                <svg className="absolute bottom-0 right-0 w-12 h-12 text-primary/20 translate-x-2 translate-y-2 rotate-180" fill="currentColor" viewBox="0 0 32 32">
+                <svg className="absolute bottom-0 right-0 w-12 h-12 text-primary/20 dark:text-primary-dark/20 translate-x-2 translate-y-2 rotate-180" fill="currentColor" viewBox="0 0 32 32">
                   <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z"/>
                 </svg>
               </div>
@@ -442,12 +442,12 @@ const AccommodationPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="mt-10 pt-10 border-t border-gray-200"
+                className="mt-10 pt-10 border-t border-gray-200 dark:border-gray-700"
               >
-                <div className="bg-primary/5 px-6 sm:px-8 py-6 rounded-2xl">
+                <div className="bg-primary/5 dark:bg-primary-dark/10 px-6 sm:px-8 py-6 rounded-2xl">
                   <div className="flex items-start space-x-3 mb-4">
-                    <HomeIcon className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                    <p className="text-gray-700 font-medium text-lg">
+                    <HomeIcon className="h-6 w-6 text-primary dark:text-primary-dark flex-shrink-0 mt-1" />
+                    <p className="text-gray-700 dark:text-gray-200 font-medium text-lg">
                       Need help with accommodation? We&apos;re here to assist!
                     </p>
                   </div>
@@ -479,11 +479,11 @@ const AccommodationPage = () => {
                       </svg>
                     </a>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-200 text-center">
-                    <p className="text-sm text-gray-600">
+                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600 text-center">
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
                       <span className="font-medium">WhatsApp:</span> +256 761 900 722
                     </p>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                       <span className="font-medium">Email:</span> arnolduwamz7@gmail.com
                     </p>
                   </div>
@@ -500,20 +500,20 @@ const AccommodationPage = () => {
               className="relative"
             >
               <div className="inline-block">
-                <p className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary mb-4 relative">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary dark:text-primary-dark mb-4 relative">
                   Looking forward to hosting you!
                   <motion.span
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, delay: 1 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-0 left-0 h-0.5 bg-primary/30"
+                    className="absolute bottom-0 left-0 h-0.5 bg-primary/30 dark:bg-primary-dark/30"
                   ></motion.span>
                 </p>
-                <p className="text-xl sm:text-2xl text-gray-600 font-light flex items-center justify-center space-x-2">
+                <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 font-light flex items-center justify-center space-x-2">
                   <span>With love,</span>
-                  <span className="font-serif text-primary">Arnold & Haven</span>
-                  <HeartIcon className="h-5 w-5 text-primary fill-primary ml-2" />
+                  <span className="font-serif text-primary dark:text-primary-dark">Arnold & Haven</span>
+                  <HeartIcon className="h-5 w-5 text-primary dark:text-primary-dark fill-primary dark:fill-primary-dark ml-2" />
                 </p>
               </div>
             </motion.div>
@@ -522,7 +522,7 @@ const AccommodationPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-primary text-white">
+      <footer className="py-12 bg-primary dark:bg-primary-dark text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 text-center">
           <p className="text-sm opacity-90">
             &copy; {new Date().getFullYear()} Arnold & Haven. All rights reserved.

@@ -20,7 +20,7 @@ const GallerySection = () => {
 
   return (
     <>
-      <section id="gallery" className="py-20 sm:py-32 px-4 sm:px-8 bg-white">
+      <section id="gallery" className="py-20 sm:py-32 px-4 sm:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -28,10 +28,10 @@ const GallerySection = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-primary">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-primary dark:text-primary-dark">
               {t("Gallery")}
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
+            <div className="w-24 h-1 bg-primary dark:bg-primary-dark mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
