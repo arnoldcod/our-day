@@ -121,6 +121,16 @@ const TravelGuidePage = () => {
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
         </svg>
       ),
+      'motorcycle-car': (
+        <div className="flex items-center justify-center gap-1">
+          <svg className={`${size.replace('h-16 w-16', 'h-14 w-14').replace('h-12 w-12', 'h-10 w-10')} text-gray-900 dark:text-gray-100`} fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.44 9.03L15.41 5H11v2h3.59l2 2H5c-2.8 0-5 2.2-5 5s2.2 5 5 5c2.46 0 4.45-1.69 4.9-4h1.65l2.77-2.77c-.21.54-.32 1.14-.32 1.77 0 2.8 2.2 5 5 5s5-2.2 5-5c0-2.65-1.97-4.77-4.56-4.97zM7.82 15C7.4 16.15 6.28 17 5 17c-1.63 0-3-1.37-3-3s1.37-3 3-3c1.28 0 2.4.85 2.82 2H5v2h2.82zM19 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+          </svg>
+          <svg className={`${size.replace('h-16 w-16', 'h-14 w-14').replace('h-12 w-12', 'h-10 w-10')} text-gray-900 dark:text-gray-100`} fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+          </svg>
+        </div>
+      ),
     };
     return icons[iconType] || <div className="text-5xl text-center text-primary dark:text-primary-dark">{iconType}</div>;
   };
@@ -173,9 +183,9 @@ const TravelGuidePage = () => {
 
   const essentialApps = [
     {
-      name: t('travelGuide.apps.safeBoda.name'),
+      name: "SafeBoda & SafeCar",
       description: t('travelGuide.apps.safeBoda.description'),
-      icon: "🏍️",
+      icon: "motorcycle-car",
       links: {
         ios: "https://apps.apple.com/ug/app/safeboda-with-safecar/id1274389246",
         android: "https://play.google.com/store/apps/details?id=com.safeboda.passenger"
