@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import GallerySectionChina from './GallerySectionChina';
+import BridalShowerCarousel from './BridalShowerCarousel';
 import { useTranslation } from 'react-i18next';
 import { HeartIcon } from '@heroicons/react/24/outline';
 
@@ -228,17 +229,93 @@ const OurStoryPage = () => {
       </section>
 
       {/* Divider Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80 dark:from-primary-dark dark:to-primary-dark/80">
-        <div className="max-w-4xl mx-auto text-center px-4">
+      <section className="relative py-20 sm:py-24 overflow-hidden bg-gradient-to-br from-emerald-50/40 via-green-50/30 to-teal-50/40 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-200/40 dark:bg-emerald-900/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-green-200/40 dark:bg-green-900/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-teal-200/40 dark:bg-teal-900/10 rounded-full blur-3xl"></div>
+        </div>
+
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-5 dark:opacity-10" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+
+        <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <HeartIcon className="h-12 w-12 text-white dark:text-gray-100 mx-auto mb-4" />
-            <p className="text-2xl sm:text-3xl font-serif text-white dark:text-gray-100 italic">
-              &quot;We give all glory to God, who has been the foundation of our relationship&quot;
-            </p>
+            {/* Animated Heart with elegant styling */}
+            <motion.div
+              animate={{
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative inline-block mb-6"
+            >
+              {/* Soft glow effect */}
+              <div className="absolute inset-0 blur-xl opacity-40">
+                <HeartIcon className="h-16 w-16 text-emerald-400 dark:text-emerald-300 fill-emerald-400 dark:fill-emerald-300" />
+              </div>
+              {/* Main heart icon */}
+              <HeartIcon className="relative h-16 w-16 text-emerald-600 dark:text-emerald-400 fill-emerald-100 dark:fill-emerald-900/30 mx-auto drop-shadow-lg" />
+            </motion.div>
+
+            {/* Decorative line above quote */}
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center mb-6"
+            >
+              <div className="h-px bg-gradient-to-r from-transparent via-emerald-300/60 dark:via-emerald-600/60 to-transparent w-full max-w-md"></div>
+            </motion.div>
+
+            {/* Quote text with elegant styling */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-serif text-gray-700 dark:text-gray-200 italic leading-relaxed px-4"
+            >
+              <span className="text-emerald-600 dark:text-emerald-400 text-5xl leading-none">&ldquo;</span>
+              We give all glory to God, who has been the foundation of our relationship
+              <span className="text-emerald-600 dark:text-emerald-400 text-5xl leading-none">&rdquo;</span>
+            </motion.p>
+
+            {/* Decorative line below quote */}
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center mt-6"
+            >
+              <div className="h-px bg-gradient-to-r from-transparent via-emerald-300/60 dark:via-emerald-600/60 to-transparent w-full max-w-md"></div>
+            </motion.div>
+
+            {/* Optional: Small decorative elements */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-8 flex justify-center gap-2"
+            >
+              <span className="text-emerald-400 dark:text-emerald-500 text-sm">✦</span>
+              <span className="text-green-400 dark:text-green-500 text-sm">✦</span>
+              <span className="text-teal-400 dark:text-teal-500 text-sm">✦</span>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -247,6 +324,9 @@ const OurStoryPage = () => {
       <section className="bg-gray-50 dark:bg-gray-800">
         <GallerySectionChina />
       </section>
+
+      {/* Bridal Shower Section */}
+      <BridalShowerCarousel />
 
       {/* Footer */}
       <footer className="py-12 bg-primary dark:bg-primary-dark text-white dark:text-gray-100">
