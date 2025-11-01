@@ -106,33 +106,6 @@ const HomePage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {/* Animated pulse rings */}
-              <motion.div
-                animate={{
-                  scale: [1, 1.4, 1.4],
-                  opacity: [0.7, 0, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                }}
-                className="absolute inset-0 rounded-full bg-red-400/40"
-              />
-              <motion.div
-                animate={{
-                  scale: [1, 1.4, 1.4],
-                  opacity: [0.7, 0, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                  delay: 0.5,
-                }}
-                className="absolute inset-0 rounded-full bg-orange-400/40"
-              />
-
               {/* Button content */}
               <div className="relative bg-gradient-to-r from-red-500 via-orange-500 to-orange-600 text-white px-10 sm:px-14 py-4 sm:py-5 rounded-full shadow-2xl transform transition-all duration-300 group-hover:shadow-orange-500/50 group-hover:from-red-600 group-hover:via-orange-600 group-hover:to-orange-700">
                 <div className="flex items-center space-x-3">
