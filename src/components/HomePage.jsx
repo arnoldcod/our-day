@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import GallerySection from './GallerySection';
 import Navbar from './Navbar';
+import OptimizedImage from './OptimizedImage';
 import { useTranslation } from 'react-i18next';
-import { CalendarIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -46,10 +47,11 @@ const HomePage = () => {
         className="h-screen relative flex items-center justify-center"
       >
         <div className="absolute inset-0 z-0">
-          <img
+          <OptimizedImage
             src="./weddddd.jpg"
             alt="Wedding ceremony venue"
             className="w-full h-full object-cover"
+            priority={true}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         </div>
@@ -77,7 +79,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex gap-4 sm:gap-8 justify-center"
+            className="flex gap-4 sm:gap-8 justify-center mb-12"
           >
             {Object.entries(timeLeft).map(([unit, value]) => (
               <div key={unit} className="text-center">
@@ -87,6 +89,102 @@ const HomePage = () => {
                 </div>
               </div>
             ))}
+          </motion.div>
+
+          {/* Prominent RSVP Button */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="flex justify-center"
+          >
+            <motion.a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScAzGSYder59TqJilN9iesT_NJELBSv6D6K3dpE255vYkOaBQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {/* Animated pulse rings */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.4, 1.4],
+                  opacity: [0.7, 0, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                }}
+                className="absolute inset-0 rounded-full bg-red-400/40"
+              />
+              <motion.div
+                animate={{
+                  scale: [1, 1.4, 1.4],
+                  opacity: [0.7, 0, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  delay: 0.5,
+                }}
+                className="absolute inset-0 rounded-full bg-orange-400/40"
+              />
+
+              {/* Button content */}
+              <div className="relative bg-gradient-to-r from-red-500 via-orange-500 to-orange-600 text-white px-10 sm:px-14 py-4 sm:py-5 rounded-full shadow-2xl transform transition-all duration-300 group-hover:shadow-orange-500/50 group-hover:from-red-600 group-hover:via-orange-600 group-hover:to-orange-700">
+                <div className="flex items-center space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 sm:h-7 sm:w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span className="text-xl sm:text-2xl font-bold tracking-wide">
+                    {t('confirmAttendance')}
+                  </span>
+                  <motion.svg
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 sm:h-7 sm:w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </motion.svg>
+                </div>
+
+                {/* Shine effect */}
+                <motion.div
+                  animate={{
+                    x: ['-100%', '200%'],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-12"
+                />
+              </div>
+            </motion.a>
           </motion.div>
         </div>
       </motion.section>

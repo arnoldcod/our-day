@@ -23,6 +23,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showLangMenu && !event.target.closest('.language-dropdown')) {
+        setShowLangMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLangMenu]);
+
   const navLinks = [
     { name: t("Home"), path: '/', hash: '#hero' },
     { name: t("ourStoryButton"), path: '/our-story' },
@@ -49,10 +60,11 @@ const Navbar = () => {
   };
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'rw', name: 'Kinyarwanda', flag: '🇷🇼' },
-    { code: 'ti', name: 'ትግርኛ', flag: '🇪🇷' },
+    { code: 'en', name: 'English' },
+    { code: 'fr', name: 'Français' },
+    { code: 'rw', name: 'Kinyarwanda' },
+    { code: 'ti', name: 'ትግርኛ' },
+    { code: 'sw', name: 'Kiswahili' },
   ];
 
   const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
@@ -100,7 +112,7 @@ const Navbar = () => {
               ))}
 
               {/* Language Switcher */}
-              <div className="relative">
+              <div className="relative language-dropdown">
                 <button
                   onClick={() => setShowLangMenu(!showLangMenu)}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
@@ -110,7 +122,15 @@ const Navbar = () => {
                   }`}
                 >
                   <GlobeAltIcon className="h-5 w-5" />
-                  <span className="text-sm">{currentLang.flag}</span>
+                  <span className="text-sm font-medium">Languages</span>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${showLangMenu ? 'rotate-180' : ''}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
 
                 <AnimatePresence>
@@ -128,14 +148,13 @@ const Navbar = () => {
                             i18n.changeLanguage(lang.code);
                             setShowLangMenu(false);
                           }}
-                          className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2 ${
+                          className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
                             i18n.language === lang.code
-                              ? 'bg-primary/10 dark:bg-primary-dark/20 text-primary dark:text-primary-dark'
+                              ? 'bg-primary/10 dark:bg-primary-dark/20 text-primary dark:text-primary-dark font-medium'
                               : 'text-gray-700 dark:text-gray-200'
                           }`}
                         >
-                          <span>{lang.flag}</span>
-                          <span>{lang.name}</span>
+                          {lang.name}
                         </button>
                       ))}
                     </motion.div>
@@ -207,26 +226,60 @@ const Navbar = () => {
 
               <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-4">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Select Language</p>
                   <DarkModeToggle />
                 </div>
-                {languages.map((lang) => (
+
+                {/* Mobile Language Dropdown */}
+                <div className="mb-4 language-dropdown">
                   <button
-                    key={lang.code}
-                    onClick={() => {
-                      i18n.changeLanguage(lang.code);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors flex items-center space-x-3 ${
-                      i18n.language === lang.code
-                        ? 'bg-primary dark:bg-primary-dark text-white'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
-                    }`}
+                    onClick={() => setShowLangMenu(!showLangMenu)}
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
                   >
-                    <span className="text-2xl">{lang.flag}</span>
-                    <span>{lang.name}</span>
+                    <div className="flex items-center space-x-2">
+                      <GlobeAltIcon className="h-5 w-5" />
+                      <span className="font-medium">Languages</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400">({currentLang.name})</span>
+                    </div>
+                    <svg
+                      className={`h-5 w-5 transition-transform ${showLangMenu ? 'rotate-180' : ''}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
-                ))}
+
+                  <AnimatePresence>
+                    {showLangMenu && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="mt-2 space-y-1">
+                          {languages.map((lang) => (
+                            <button
+                              key={lang.code}
+                              onClick={() => {
+                                i18n.changeLanguage(lang.code);
+                                setShowLangMenu(false);
+                              }}
+                              className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                                i18n.language === lang.code
+                                  ? 'bg-primary dark:bg-primary-dark text-white font-medium'
+                                  : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
+                              }`}
+                            >
+                              {lang.name}
+                            </button>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
 
               <motion.a
